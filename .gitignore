@@ -1,0 +1,11 @@
+*
+!.gitignore
+
+# track config files
+!*/.config/polybar/*
+!*/.config/i3/*
+!*/.config/i3status/*
+!*/.config/picom/*
+!*/.config/neofetch/*
+!*/.config/dunst/*
+!*/.zshrc
