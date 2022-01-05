@@ -2,10 +2,18 @@
 !.gitignore
 
 # track config files
-!*/.config/polybar/*
-!*/.config/i3/*
-!*/.config/i3status/*
-!*/.config/picom/*
-!*/.config/neofetch/*
-!*/.config/dunst/*
-!*/.zshrc
+!/.config
+!/.config/i3/
+!/.config/i3/*
+!/.config/i3/custom/*
+!/.config/polybar
+!/.config/polybar/*
+!/.config/i3status/
+!/.config/i3status/*
+!/.config/picom/
+!/.config/picom/*
+!/.config/neofetch/
+!/.config/neofetch/*
+!/.config/dunst/
+!/.config/dunst/*
+!/.zshrc
