@@ -1,5 +1,7 @@
 *
 !.gitignore
+!.zshrc
+!README.MD
 
 # track config files
 !/.config
@@ -16,4 +18,3 @@
 !/.config/neofetch/*
 !/.config/dunst/
 !/.config/dunst/*
-!/.zshrc
