@@ -18,3 +18,5 @@
 !/.config/neofetch/*
 !/.config/dunst/
 !/.config/dunst/*
+!/.config/kitty/
+!/.config/kitty/*
