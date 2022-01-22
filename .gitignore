@@ -20,3 +20,5 @@
 !/.config/dunst/*
 !/.config/kitty/
 !/.config/kitty/*
+!/.config/vis/
+!/.config/vis/*
