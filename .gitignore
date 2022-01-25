@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.zshrc
+!.profile
 !README.MD
 
 # track config files
@@ -22,7 +23,15 @@
 !/.config/kitty/*
 !/.config/vis/
 !/.config/vis/*
+
+# BetterDiscord
 !/.config/BetterDiscord/
 !/.config/BetterDiscord/*
+!/.config/BetterDiscord/plugins/
+!/.config/BetterDiscord/plugins/*
+!/.config/BetterDiscord/themes/
+!/.config/BetterDiscord/themes/*
+
+# PPSSPP
 !/.config/ppsspp/
 !/.config/ppsspp/*
