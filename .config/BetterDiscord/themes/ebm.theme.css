@@ -86,7 +86,7 @@
 
 
 :root {
-  --main-color: var(--__lavender);
+  --main-color: var(--__red);
   --hover-color: var(--__blue_muted);
   --success-color: var(--__green);
   --danger-color: var(--__red);
@@ -129,8 +129,8 @@
   --home-icon: url('https://clearvision.gitlab.io/icons/discord.svg');
   --home-position: center;
   --home-size: 40px;
-  --channel-unread: var(--main-color);
-  --channel-color: var(--__lavender_muted);
+  --channel-unread: var(--__red);
+  --channel-color: var(--main-color);
   --muted-color: var(--__lavender_muted);
   --online-color: #43b581;
   --idle-color: #faa61a;
