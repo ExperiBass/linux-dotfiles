@@ -17,11 +17,80 @@
 @import url('https://nyri4.github.io/Discolored/main.css');
 
 :root {
-  --main-color: #1B81F3;
-  --hover-color: #14268C;
-  --success-color: #43b581;
-  --danger-color: #982929;
-  --url-color: #1B81F3;
+  /* Give H, S, L values */
+
+/* rainbow 🌈 */
+  --rosewater: 10, 56%, 91%;
+  --flamingo: 0, 59%, 88%;
+  --mauve: 279, 70%, 83%;
+  --pink: 316, 72%, 86%;
+  --maroon: 349, 60%, 77%;
+  --red: 342, 79%, 75%;
+  --peach: 024, 88%, 78%;
+  --yellow: 041, 88%, 84%;
+  --green: 128, 58%, 79%;
+  --green_darken: 128, 58%, 76%;
+  --green_darkest: 128, 58%, 72%;
+  --teal: 171, 53%, 81%;
+  --blue: 207, 93%, 79%;
+  --blue_darken: 213, 84%, 78%;
+  --sky: 189, 71%, 73%;
+  --lavender: 238, 100%, 89%;
+
+/* black & white ☯️ */
+  --black0: 254, 25%, 10%;
+  --black1: 249, 23%, 12%;
+  --black2: 240, 21%, 15%;
+  --black3: 249, 18%, 22%;
+  --black4: 254, 12%, 36%;
+  --gray0: 247, 8%, 46%;
+  --gray1: 274, 11%, 59%;
+  --gray2: 285, 10%, 75%;
+  --white: 220, 38%, 89%;
+
+  /* INTERNAL VARS */
+  --__black0: hsl(var(--black0));
+  --__black1: hsl(var(--black1));
+  --__black2: hsl(var(--black2));
+  --__black3: hsl(var(--black3));
+  --__black4: hsl(var(--black4));
+  --__gray0: hsl(var(--gray0));
+  --__gray1: hsl(var(--gray1));
+  --__gray2: hsl(var(--gray2));
+  --__white: hsl(var(--white));
+  --__red: hsl(var(--red));
+  --__yellow: hsl(var(--yellow));
+  --__peach: hsl(var(--peach));
+  --__green: hsl(var(--green));
+  --__lavender: hsl(var(--lavender));
+  --__blue: hsl(var(--blue));
+  --__pink: hsl(var(--pink));
+
+  /* MUTED VARS */
+  --__black2_muted: hsl(var(--black2), 0.2);
+  --__black1_muted: hsl(var(--black1), 0.2);
+  --__black3_muted: hsl(var(--black3), 0.2);
+  --__gray0_muted: hsl(var(--gray0), 0.2);
+  --__gray1_muted: hsl(var(--gray1), 0.2);
+  --__white_muted: hsl(var(--white), 0.2);
+  --__gray2_muted: hsl(var(--gray2), 0.2);
+  --__black4_muted: hsl(var(--black4), 0.2);
+  --__red_muted: hsl(var(--red), 0.2);
+  --__yellow_muted: hsl(var(--yellow), 0.2);
+  --__peach_muted: hsl(var(--peach), 0.2);
+  --__green_muted: hsl(var(--green), 0.2);
+  --__lavender_muted: hsl(var(--lavender), 0.2);
+  --__blue_muted: hsl(var(--blue), 0.2);
+  --__pink_muted: hsl(var(--pink), 0.2);
+}
+
+
+:root {
+  --main-color: var(--__lavender);
+  --hover-color: var(--__blue_muted);
+  --success-color: var(--__green);
+  --danger-color: var(--__red);
+  --url-color:  var(--__blue);
   --background-image: transparent;
   --background-shading: 0%;
   --background-position: center;
@@ -34,7 +103,7 @@
   --background-grayscale: 0%;
   --background-invert: 0%;
   --background-blur: 0px;
-  --background-overlay: rgb(8,17,28,1);
+  --background-overlay: var(--__black2);
   --user-popout-image: transparent;
   --user-popout-position: top right;
   --user-popout-size: cover;
@@ -61,8 +130,8 @@
   --home-position: center;
   --home-size: 40px;
   --channel-unread: var(--main-color);
-  --channel-color: rgba(255,255,255,0.3);
-  --muted-color: rgba(255,255,255,0.1);
+  --channel-color: var(--__lavender_muted);
+  --muted-color: var(--__lavender_muted);
   --online-color: #43b581;
   --idle-color: #faa61a;
   --dnd-color: #982929;
@@ -95,12 +164,13 @@
   --rs-medium-width: 2px;
   --rs-large-width: 2px;
   --rs-avatar-shape: 50%;
-  --rs-online-color: #43b581;
-  --rs-idle-color: #faa61a;
-  --rs-dnd-color: #f04747;
-  --rs-offline-color: #636b75;
-  --rs-streaming-color: #643da7;
+  --rs-online-color: var(--online-color);
+  --rs-idle-color: var(--idle-color);
+  --rs-dnd-color: var(--dnd-color);
+  --rs-offline-color: var(--idle-color);
+  --rs-streaming-color: var(--streaming-color);
   --rs-phone-visible: block;
+  color: var(--__white);
 }
 
 /* Any custom CSS below here */
