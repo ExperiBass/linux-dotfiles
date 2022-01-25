@@ -1,0 +1,64 @@
+{
+    "currentVersionInfo": {
+        "version": "1.1.0",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "panelFix": true,
+        "lists": {
+            "enabled": true,
+            "name": "slide-up",
+            "page": "0",
+            "direction": "downwards",
+            "custom": {
+                "enabled": false,
+                "frames": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "page": 0
+            },
+            "duration": 0.3,
+            "delay": 0.02,
+            "limit": 60
+        },
+        "messages": {
+            "enabled": true,
+            "name": "slide-up",
+            "page": 0,
+            "custom": {
+                "enabled": false,
+                "frames": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "page": 0
+            },
+            "duration": 0.4,
+            "delay": 0.04,
+            "limit": 30
+        },
+        "buttons": {
+            "enabled": true,
+            "name": "slide-up",
+            "page": 0,
+            "direction": "right",
+            "custom": {
+                "enabled": false,
+                "frames": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "page": 0
+            },
+            "duration": 0.4,
+            "delay": 0.1
+        }
+    }
+}
