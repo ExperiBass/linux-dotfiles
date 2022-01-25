@@ -24,3 +24,5 @@
 !/.config/vis/*
 !/.config/BetterDiscord/
 !/.config/BetterDiscord/*
+!/.config/ppsspp/
+!/.config/ppsspp/*
