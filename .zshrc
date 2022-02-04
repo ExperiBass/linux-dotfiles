@@ -49,7 +49,7 @@ alias nf='neofetch'
 # Development
 source ~/.config/zsh/ssh.zsh.config
 source ~/.config/zsh/distcc.zsh.config
-
+source ~/.config/zsh/ftp.zsh.config
 # Furry MUCKs
 alias furrymuck='telnet furrymuck.com 8888'
 alias furtoonia='telnet ft.furtoonia.net 9999'
