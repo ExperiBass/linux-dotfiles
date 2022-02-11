@@ -1,11 +1,11 @@
 {
 	"changeLogs": {
-		"BDFDB": "2.0.6",
+		"BDFDB": "2.1.3",
 		"CharCounter": "1.5.7",
 		"CopyRawMessage": "1.1.2",
 		"RemoveBlockedUsers": "1.3.7",
 		"SplitLargeMessages": "1.7.0",
-		"StaffTag": "1.4.8",
+		"StaffTag": "1.4.9",
 		"ThemeSettings": "1.3.3"
 	},
 	"choices": {
@@ -17,7 +17,7 @@
 		"useChromium": false
 	},
 	"hashes": {
-		"0BDFDB.data.json": "de9f77c58e15a124ec2a688437be524b96649784",
+		"0BDFDB.data.json": "9bb8cc01e640a900d7c2e3ea6c85da87fa0ec7d6",
 		"0BDFDB.raw.css": "a1036e10077b9457f3903795204f7dbd91d7646d"
 	}
 }

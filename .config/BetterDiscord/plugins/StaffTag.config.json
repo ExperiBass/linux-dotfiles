@@ -3,7 +3,8 @@
 		"useCrown": true,
 		"useRoleColor": true,
 		"useBlackFont": false,
-		"ignoreBots": false
+		"ignoreBots": false,
+		"ignoreMyself": false
 	},
 	"inputs": {
 		"ownOwnerTagName": "Owner",

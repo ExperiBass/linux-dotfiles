@@ -2,7 +2,7 @@
  * @name StaffTag
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.4.8
+ * @version 1.4.9
  * @description Adds a Crown/Tag to Server Owners (or Admins/Management)
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -17,31 +17,17 @@ module.exports = (_ => {
 		"info": {
 			"name": "StaffTag",
 			"author": "DevilBro",
-			"version": "1.4.8",
+			"version": "1.4.9",
 			"description": "Adds a Crown/Tag to Server Owners (or Admins/Management)"
 		},
 		"changeLog": {
-			"improved": {
-				"Thread Creators": "Added a dark gray crown for Thread Creators (they no longe appear as Server Owners)",
-				"Server Owner/Group Owner": "Split the settings for Server and Group Owners, you can now change/disable them separately"
-			}
-		},
-		"changeLog": {
-			"fixed": {
-				"Member List Position": ""
+			"added": {
+				"Ignore Myself": "Added Option to not add tags for yourself"
 			}
 		}
 	};
 
-	return (window.Lightcord && !Node.prototype.isPrototypeOf(window.Lightcord) || window.LightCord && !Node.prototype.isPrototypeOf(window.LightCord) || window.Astra && !Node.prototype.isPrototypeOf(window.Astra)) ? class {
-		getName () {return config.info.name;}
-		getAuthor () {return config.info.author;}
-		getVersion () {return config.info.version;}
-		getDescription () {return "Do not use LightCord!";}
-		load () {BdApi.alert("Attention!", "By using LightCord you are risking your Discord Account, due to using a 3rd Party Client. Switch to an official Discord Client (https://discord.com/) with the proper BD Injection (https://betterdiscord.app/)");}
-		start() {}
-		stop() {}
-	} : !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
+	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
 		getName () {return config.info.name;}
 		getAuthor () {return config.info.author;}
 		getVersion () {return config.info.version;}
@@ -105,7 +91,8 @@ module.exports = (_ => {
 						useCrown:					{value: true,	description: "Use the Crown Icon instead of the Bot Tag Style"},
 						useRoleColor:				{value: true, 	description: "Use the Role Color instead of the default Blurple"},
 						useBlackFont:				{value: false,	description: "Use black Font instead of darkening the Role Color on bright Colors"},
-						ignoreBots:					{value: false,	description: "Don't add the Owner/Admin/Management Tag for Bots"}
+						ignoreBots:					{value: false,	description: "Don't add the Owner/Admin/Management Tag for Bots"},
+						ignoreMyself:				{value: false,	description: "Don't add the Owner/Admin/Management Tag for yourself"}
 					},
 					tagTypes: {
 						owners:						{value: true, 	description: "Server Owner Tag"},
@@ -413,7 +400,7 @@ module.exports = (_ => {
 			}
 			
 			getUserType (user, channelId) {
-				if (!user || this.settings.general.ignoreBots && user.bot) return userTypes.NONE;
+				if (!user || this.settings.general.ignoreBots && user.bot || this.settings.general.ignoreMyself && user.id == BDFDB.UserUtils.me.id) return userTypes.NONE;
 				const channel = BDFDB.LibraryModules.ChannelStore.getChannel(channelId || BDFDB.LibraryModules.LastChannelStore.getChannelId());
 				if (!channel) return userTypes.NONE;
 				const guild = BDFDB.LibraryModules.GuildStore.getGuild(channel.guild_id);
@@ -561,12 +548,12 @@ module.exports = (_ => {
 					case "zh-CN":	// Chinese (China)
 						return {
 							management:							"管理",
-							creator:							"{{var0}}创建者"
+							creator:							"{{var0}} 创建者"
 						};
 					case "zh-TW":	// Chinese (Taiwan)
 						return {
 							management:							"管理",
-							creator:							"{{var0}}創建者"
+							creator:							"{{var0}} 建立者"
 						};
 					default:		// English
 						return {
