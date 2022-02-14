@@ -3,7 +3,7 @@
 	"favorites": "2 429",
 	"filters": {
 		"downloadable": true,
-		"outdated": false,
+		"outdated": true,
 		"updated": true
 	},
 	"general": {

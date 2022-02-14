@@ -1,7 +1,7 @@
 /**
  * @name DoubleClickToEdit
  * @author Farcrada
- * @version 9.2.4
+ * @version 9.3.2
  * @description Double click a message you wrote to quickly edit it.
  * 
  * @website https://github.com/Farcrada/DiscordPlugins/
@@ -15,7 +15,7 @@ const config = {
 		name: "Double Click To Edit",
 		id: "DoubleClickToEdit",
 		description: "Double click a message you wrote to quickly edit it",
-		version: "9.2.4",
+		version: "9.3.2",
 		author: "Farcrada",
 		updateUrl: "https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js"
 	}
@@ -44,12 +44,21 @@ class DoubleClickToEdit {
 			this.selectedClass = BdApi.findModuleByProps("message", "selected").selected;
 			this.messagesWrapper = BdApi.findModuleByProps("empty", "messagesWrapper").messagesWrapper;
 
+			//Reply functions
+			this.replyToMessage = BdApi.findModuleByProps("replyToMessage").replyToMessage;
+			this.getChannel = BdApi.findModuleByProps("getChannel", "getDMFromUserId").getChannel;
+
 			//Stores
 			this.MessageStore = BdApi.findModuleByProps("receiveMessage", "editMessage");
 			this.CurrentUserStore = BdApi.findModuleByProps("getCurrentUser");
 
+			//Settings
+			this.SwitchItem = BdApi.findModuleByDisplayName("SwitchItem");
+
 			//Events
 			document.addEventListener('dblclick', this.doubleclickFunc);
+
+			this.doubleClickToReplySetting = BdApi.loadData(config.info.id, "doubleClickToReplySetting") ?? false;
 		}
 		catch (err) {
 			try {
@@ -62,10 +71,43 @@ class DoubleClickToEdit {
 		}
 	}
 
+	//By doing this we make sure we're able to remove our event
+	//otherwise it gets stuck on the page and never actually unloads.
 	doubleclickFunc = (e) => this.handler(e);
 
-	stop() {
-		document.removeEventListener('dblclick', this.doubleclickFunc);
+	stop = () => document.removeEventListener('dblclick', this.doubleclickFunc);
+
+	getSettingsPanel() {
+		//Anonymous function to preserve the this scope,
+		//which also makes it an anonymous functional component;
+		//Pretty neat.
+		return () => {
+			//Since inherently when you toggle something you need to know what you're toggling from
+			//because of this instead of using useState you'd use useReducer
+			const [state, dispatch] = BdApi.React.useReducer(currentState => {
+				//This runs when you flick the switch
+				//Starting with reversing the current state:
+				const newState = !currentState;
+
+				//Saving the new state
+				this.doubleClickToReplySetting = newState;
+				BdApi.saveData(config.info.id, "doubleClickToReplySetting", newState);
+
+				//Returning the new state
+				return newState;
+
+				//Default value
+			}, this.doubleClickToReplySetting)
+
+			return BdApi.React.createElement(this.SwitchItem, {
+				//The state that is loaded with the default value
+				value: state,
+				note: "Enable to double click another's message and start replying.",
+				//Since onChange passes the current state we can simply invoke it as such
+				onChange: dispatch
+				//Discord Is One Of Those
+			}, "Enable Replying");
+		}
 	}
 
 	handler(e) {
@@ -74,64 +116,33 @@ class DoubleClickToEdit {
 			return;
 
 		//Target the message
-		const messagediv = e.target.closest('[class^=message]');
+		const messageDiv = e.target.closest('li > [class^=message]');
 		//If it finds nothing, null it.
-		if (!messagediv)
+		if (!messageDiv)
 			return;
 		//Make sure we're not resetting when the message is already in edit-mode.
-		if (messagediv.classList.contains(this.selectedClass))
+		if (messageDiv.classList.contains(this.selectedClass))
 			return;
 
 		//Basically make a HTMLElement/Node interactable with it's React components.
-		const instance = BdApi.getInternalInstance(messagediv);
+		const instance = BdApi.getInternalInstance(messageDiv);
 		//Mandatory nullcheck
 		if (!instance)
 			return;
 
 
-		//This is filled with the message top to bottom,
-		//if it has a quote the quote will be "message".
-		let message = this.getValueFromKey(instance, "message");
-		//As a result, this will be the actual message you want to edit.
-		const baseMessage = this.getValueFromKey(instance, "baseMessage"),
+		//The message instance is filled top to bottom, as it is in view.
+		//As a result, "baseMessage" will be the actual message you want to address. And "message" will be the reply.
+		//Maybe the message has a reply, so check if "baseMessage" exists and otherwise fallback on "message".
+		const message = this.getValueFromKey(instance, "baseMessage") ?? this.getValueFromKey(instance, "message");
 
-			//Check if the quote or standalone message is yours.
-			msgYours = this.messageYours(message, this.CurrentUserStore.getCurrentUser().id),
-			//If double clicked a message with a quote, check if the "base"-message is yours.
-			baseMsgYours = this.messageYours(baseMessage, this.CurrentUserStore.getCurrentUser().id);
-
-		//Message(/quote) isn't yours
-		if (!msgYours) {
-			message = baseMessage;
-			//Maybe the base message is yours
-			if (!baseMsgYours)
-				return
-		}
-		//Message(/quote) is yours
-		else if (msgYours) {
-			//Maybe it is a quote, so check the base message (if it exists)
-			if (baseMsgYours)
-				message = baseMessage;
-			//This can also be "undefined", so a simple !baseMsgYours is not gonna work.
-			else if (baseMsgYours == false)
-				return;
-		}
-
-		//If anything was yours;
-		//Execute order 66
-		this.MessageStore.startEditMessage(message.channel_id, message.id, message.content);
-	}
-
-	messageYours(message, id) {
-		//If message is falsely
-		if (!message)
-			return undefined;
-
-		//If it's us
-		if (message.author.id === id)
-			return true;
-		//But if it's not!
-		return false;
+		if (message)
+			if (message.author.id === this.CurrentUserStore.getCurrentUser().id) {
+				this.MessageStore.startEditMessage(message.channel_id, message.id, message.content);
+			}
+			else if (this.doubleClickToReplySetting) {
+				this.replyToMessage(this.getChannel(message.channel_id), message, e);
+			}
 	}
 
 	getValueFromKey(instance, searchkey) {
@@ -141,10 +152,8 @@ class DoubleClickToEdit {
 			child: true,
 			sibling: true
 		};
-		//Start our mayhem
-		return getKey(instance)
 
-		function getKey(instance) {
+		return function getKey(instance) {
 			//Pre-define
 			let result = undefined;
 			//Make sure it exists and isn't a "paradox".
@@ -173,6 +182,7 @@ class DoubleClickToEdit {
 			}
 			//If a poor sod got found this will not be `undefined`
 			return result;
-		}
+			//Start our mayhem
+		}(instance);
 	}
 }
