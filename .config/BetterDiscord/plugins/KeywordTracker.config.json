@@ -6,7 +6,8 @@
     "settings": {
         "whitelistedUsers": [],
         "keywords": [
-            "/\\bging(ka|er)\\b/i"
+            "/\\bging(ka|er)\\b/i",
+            "/\\bexperi(bass){0,}\\b/i"
         ],
         "ignoredUsers": [],
         "guilds": {
@@ -3402,6 +3403,17 @@
                     "840973018365034520": true
                 },
                 "enabled": true
+            },
+            "942216758020952155": {
+                "channels": {
+                    "942217768105807882": true,
+                    "942217787491909672": true,
+                    "942217899400105984": true,
+                    "942259364616626176": true,
+                    "942216758486507573": true,
+                    "942221456576745545": true
+                },
+                "enabled": true
             }
         },
         "enabled": true,
@@ -4164,7 +4176,7 @@
                 "channel_id": "868691975828807720",
                 "components": [],
                 "content": "cool ill now be pinged by \"ging\", \"gingka\", or \"ginger\"",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "942204589170638949",
@@ -4191,7 +4203,7 @@
                 "channel_id": "564490771122749482",
                 "components": [],
                 "content": "I mis spelled finger and autocorrect turned it to ginger",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "942224848233586689",
@@ -4222,7 +4234,7 @@
                 "mentions": [],
                 "nonce": "942224847663005696",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-02-13T01:05:09.510000+00:00",
                 "tts": false,
                 "type": 0,

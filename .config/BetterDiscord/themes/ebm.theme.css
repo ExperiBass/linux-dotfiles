@@ -63,8 +63,8 @@
   --dnd-color: #982929;
   --streaming-color: #593695;
   --offline-color: #808080;
-  --main-font: Bicubik Nerd Font;
-  --code-font: Bicubik Nerd Font;
+  --main-font: Bicubik Nerd Font, FiraCode Nerd Font;
+  --code-font: Bicubik Nerd Font, FiraCode Nerd Font;
   --channels-width: 220px;
   --members-width: 240px;
   --backdrop-overlay: rgba(0,0,0,0.8);
