@@ -29,7 +29,7 @@
   --background-grayscale: 0%;
   --background-invert: 0%;
   --background-blur: 0px;
-  --background-overlay: rgb(8,17,28,1);
+  --background-overlay: #000000;
   --user-popout-image: transparent;
   --user-popout-position: top right;
   --user-popout-size: cover;
@@ -96,8 +96,8 @@
   --rs-offline-color: #636b75;
   --rs-streaming-color: #643da7;
   --rs-phone-visible: block;
+
+  --text-normal: #860efd;
 }
 
 /* Any custom CSS below here */
-
-
