@@ -12,11 +12,11 @@
 @import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
 @import url('https://nyri4.github.io/Discolored/main.css');
 :root {
-  --main-color: #1B81F3;
-  --hover-color: #14268C;
+  --main-color: #5e02b9;
+  --hover-color: #860efd;
   --success-color: #43b581;
   --danger-color: #982929;
-  --url-color: #1B81F3;
+  --url-color: var(--main-color);
   --background-image: transparent;
   --background-shading: 0%;
   --background-position: center;
@@ -56,7 +56,7 @@
   --home-position: center;
   --home-size: 40px;
   --channel-unread: var(--main-color);
-  --channel-color: rgba(255,255,255,0.3);
+  --channel-color: var(--hover-color);
   --muted-color: rgba(255,255,255,0.1);
   --online-color: #43b581;
   --idle-color: #faa61a;
@@ -97,7 +97,14 @@
   --rs-streaming-color: #643da7;
   --rs-phone-visible: block;
 
-  --text-normal: #860efd;
+  --text-normal: var(--hover-color);
+  --main-color-dark: var(--hover-color);
 }
 
 /* Any custom CSS below here */
+.match-20K5f5, .overflow-1wOqNV, .username-h_Y3Us,
+ .subText-3Sk0zy, .closeButton-mupH76,
+ .desaturateUserColors-1O-G89, .clickable-31pE3P,
+ .activityText-ev7Z1T {
+  color: var(--main-color-dark)
+ }
