@@ -56,7 +56,7 @@
   --home-position: center;
   --home-size: 40px;
   --channel-unread: var(--main-color);
-  --channel-color: rgba(255,255,255,0.3);
+  --channel-color: var(--main-color);
   --muted-color: rgba(255,255,255,0.1);
   --online-color: #43b581;
   --idle-color: #faa61a;
@@ -99,5 +99,3 @@
 }
 
 /* Any custom CSS below here */
-
-
