@@ -4301,20 +4301,20 @@
                 "channel_id": "661996711518011422",
                 "components": [],
                 "content": "Diet Conk oder Ginger Ale",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "943952104639311973",
                 "member": {
-                    "avatar": null,
-                    "communication_disabled_until": null,
+                    "avatar": {},
+                    "communication_disabled_until": {},
                     "deaf": false,
                     "hoisted_role": "669960710528303144",
                     "joined_at": "2022-02-16T18:05:42.150668+00:00",
                     "mute": false,
-                    "nick": null,
+                    "nick": {},
                     "pending": false,
-                    "premium_since": null,
+                    "premium_since": {},
                     "roles": [
                         "662020964594221056",
                         "662023196257681408",
@@ -4338,11 +4338,259 @@
                 "mentions": [],
                 "nonce": "943952104228126720",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-02-17T19:28:39.528000+00:00",
                 "tts": false,
                 "type": 0,
                 "_match": "/\\bging(ka|er)\\b/i"
+            },
+            "944345013268131850": {
+                "guild_id": "643893372905586719",
+                "attachments": [],
+                "author": {
+                    "avatar": "a_17112b8782641adaf5462c2038828f5a",
+                    "discriminator": "6916",
+                    "id": "130919783477542922",
+                    "username": "Riley (They/Them)",
+                    "publicFlags": 576
+                },
+                "channel_id": "666857520047849520",
+                "components": [],
+                "content": "Experi and I will join",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "944345013268131850",
+                "member": {
+                    "avatar": "07077dac4e25571f0cd6310d7948cfa4",
+                    "communication_disabled_until": null,
+                    "deaf": false,
+                    "hoisted_role": "690704518312362085",
+                    "joined_at": "2021-05-07T04:18:42.991000+00:00",
+                    "mute": false,
+                    "nick": null,
+                    "pending": false,
+                    "premium_since": "2021-12-18T11:39:15.609000+00:00",
+                    "roles": [
+                        "843166553250988064",
+                        "690704518312362085",
+                        "900789949421473802",
+                        "789171134057807883",
+                        "787064445029318669",
+                        "886227768579358770",
+                        "780910453307211797",
+                        "644258528097468437",
+                        "911289697802784828",
+                        "787297185175175199"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "944345012735311872",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-02-18T21:29:56.245000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bexperi(bass){0,}\\b/i"
+            },
+            "944358538220826726": {
+                "guild_id": "557662127305785361",
+                "attachments": [],
+                "author": {
+                    "avatar": "d695ac1b3f3c6623e49f55d83951f79f",
+                    "discriminator": "8224",
+                    "id": "624113588033945610",
+                    "username": "Maxwell",
+                    "publicFlags": 128
+                },
+                "channel_id": "557662127305785371",
+                "components": [],
+                "content": "https://audius.co/experibass/%CE%BExp%CE%BErib%CE%BBss-lonely-bass",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "944358538220826726",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "577913102151057422",
+                    "joined_at": "2019-09-19T05:25:57.115000+00:00",
+                    "mute": false,
+                    "premium_since": "2021-06-17T21:35:24.379000+00:00",
+                    "roles": [
+                        "621418506872815616",
+                        "654416026527596544",
+                        "689662410558144707",
+                        "754893792099958855",
+                        "862744856920064011",
+                        "577913102151057422",
+                        "654078989152813107",
+                        "871909169295417396",
+                        "880916699552055316",
+                        "873258436446543902",
+                        "631624970438705210",
+                        "595393710909292574"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "944358529622343680",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-02-18T22:23:40.845000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bexperi(bass){0,}\\b/i"
+            },
+            "944359858495442985": {
+                "guild_id": "557662127305785361",
+                "attachments": [],
+                "author": {
+                    "avatar": "a5f951c3a14a647116acebf4b4c99d31",
+                    "discriminator": "6960",
+                    "id": "526528012573736961",
+                    "username": "ibloud_ivxx",
+                    "publicFlags": 0
+                },
+                "channel_id": "557662127305785371",
+                "components": [],
+                "content": "https://audius.co/experibass/ξxpξribλss-lonely-bass",
+                "edited_timestamp": null,
+                "embeds": [
+                    {
+                        "provider": {
+                            "name": "Audius"
+                        },
+                        "reference_id": "944359858495442985",
+                        "thumbnail": {
+                            "height": 1000,
+                            "proxy_url": "https://images-ext-1.discordapp.net/external/ls41EshkHfAOPC8KBujtY84J_FDElguJKy1toGPLhUY/https/content-node.audius.co/ipfs/QmUbNV2d3shwUDATDAPyA5AKGTruSWkWwWxpTshJxKKRDc/1000x1000.jpg",
+                            "url": "https://content-node.audius.co/ipfs/QmUbNV2d3shwUDATDAPyA5AKGTruSWkWwWxpTshJxKKRDc/1000x1000.jpg",
+                            "width": 1000
+                        },
+                        "title": "ΞXPΞRIBΛSS - Lonely Bass • ΞXPΞRIBΛSS",
+                        "type": "video",
+                        "url": "https://audius.co/experibass/%CE%BExp%CE%BErib%CE%BBss-lonely-bass",
+                        "video": {
+                            "height": 480,
+                            "url": "https://audius.co/embed/track/2Vg70?flavor=card&twitter=true",
+                            "width": 480
+                        }
+                    }
+                ],
+                "flags": 0,
+                "id": "944359858495442985",
+                "member": {
+                    "avatar": null,
+                    "communication_disabled_until": null,
+                    "deaf": false,
+                    "hoisted_role": null,
+                    "joined_at": "2022-02-17T23:42:20.072952+00:00",
+                    "mute": false,
+                    "nick": null,
+                    "pending": false,
+                    "premium_since": null,
+                    "roles": [
+                        "654078989152813107"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [
+                    {
+                        "avatar": "a_9cbb2ee9350cb62c7a0a0c2f3e069c5e",
+                        "discriminator": "7193",
+                        "id": "685561783649304586",
+                        "username": "Mitro ♌",
+                        "publicFlags": 0
+                    }
+                ],
+                "message_reference": {
+                    "channel_id": "557662127305785371",
+                    "guild_id": "557662127305785361",
+                    "message_id": "944359485168824381"
+                },
+                "nonce": "944359858897944576",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "a_9cbb2ee9350cb62c7a0a0c2f3e069c5e",
+                        "discriminator": "7193",
+                        "id": "685561783649304586",
+                        "public_flags": 0,
+                        "username": "Mitro ♌"
+                    },
+                    "channel_id": "557662127305785371",
+                    "components": [],
+                    "content": "Link?",
+                    "edited_timestamp": null,
+                    "embeds": [],
+                    "flags": 0,
+                    "id": "944359485168824381",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [],
+                    "pinned": false,
+                    "timestamp": "2022-02-18T22:27:26.615000+00:00",
+                    "tts": false,
+                    "type": 0
+                },
+                "timestamp": "2022-02-18T22:28:55.623000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bexperi(bass){0,}\\b/i"
+            },
+            "944387090047717448": {
+                "guild_id": "557662127305785361",
+                "attachments": [],
+                "author": {
+                    "avatar": "d695ac1b3f3c6623e49f55d83951f79f",
+                    "discriminator": "8224",
+                    "id": "624113588033945610",
+                    "username": "Maxwell",
+                    "publicFlags": 128
+                },
+                "channel_id": "557662127305785371",
+                "components": [],
+                "content": "Played\nhttps://audius.co/verbsisthehomie/verbs-hella-baller-art-gallery-04-thunder-cloud-4-feat-breezy-lovejoy-281746\nhttps://audius.co/experibass/ξxpξribλss-lonely-bass\nhttps://audius.co/sync_zephyr\nhttps://audius.co/Yirsi/10am\nhttps://audius.co/Cloud3_Music\nhttps://audius.co/amsoundstudios/the-view-from-here\nhttps://audius.co/n0zero/yash-bansal-what-is-it-like-to-be-loved-n0zero-remix\nhttps://audius.co/SenjienZ/open-your-mind-audius-exclusive\nhttps://audius.co/Sorta_Fried\nhttps://audius.co/brokenblythe/wen\nhttps://audius.co/dreameter/space-cowboy-274777\nhttps://audius.co/imvginemusic/dillon-francis-real-love-ft-aleyna-tilki-imvgine-remix\nhttps://audius.co/CorruptedEngram/up-1\nhttps://audius.co/phaseplant/nawn-snowflake-phaseplant-remix\nhttps://audius.co/VESHZA/nights-in-141472\nhttps://audius.co/Starlight/drevms\nhttps://audius.co/Dreameaterism/dreameater-deathpanda-summer-sunset\n\nNot played\nhttps://audius.co/langvmusic/free%7Cmind-the-ego-rmx\nhttps://audius.co/RiversLikesArt/tryptocurrency\nhttps://audius.co/ivylab/syd-body-ivy-labs-tw-tw-bootleg\nhttps://audius.co/nomadfox/23\nhttps://audius.co/Mitro_T/falling-for-you\nhttps://audius.co/Ellenseven/drvmmer-without-you-feat-artika-ellenseven-remix-1\nhttps://audius.co/serboy/whydoyoudothistoyourself\nhttps://audius.co/camouflybeats/xnteup\nhttps://audius.co/parkercollective/teaser-ep-four-1\nhttps://audius.co/brysonprice/bryson-price-1-up-power-created-on-arpeggi\nhttps://audius.co/illexotic/f.-o.-m.-h.\nhttps://audius.co/dvdv/poly-armour-dvdv-distance\nhttps://audius.co/SolidCircle/piña-colada\nhttps://audius.co/blopbassfishing\nhttps://audius.co/rnp1969/tonight-baby\nhttps://audius.co/deadcrane/sinking\nhttps://audius.co/chajoe/terminando-nivel\nhttps://audius.co/vjdizz/~speed-flavor~\nhttps://audius.co/NZON/dillon-francis-real-love-nzon-remix\nhttps://audius.co/brysonprice/bryson-price-1-up-power-created-on-arpeggi\nhttps://audius.co/spasmbeatz/anthill-spasmbeatz-x-mystiiquemusic\nhttps://audius.co/Ellenseven/drvmmer-without-you-feat-artika-ellenseven-remix-1\nhttps://audius.co/AnTrik/antrik-move-stems-rmx-381884\nhttps://audius.co/dunnowhomusic/kid-pistola-x-dunnowho-chente-sinatra-freestyle\nhttps://audius.co/ton_e_music/vibrancy-scene-i\nhttps://audius.co/nahreallyraps/dont-make-beats-prod.-by-roper-williams-123435\nhttps://audius.co/SomeGuyMusic/save-me",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "944387090047717448",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "577913102151057422",
+                    "joined_at": "2019-09-19T05:25:57.115000+00:00",
+                    "mute": false,
+                    "premium_since": "2021-06-17T21:35:24.379000+00:00",
+                    "roles": [
+                        "621418506872815616",
+                        "654416026527596544",
+                        "689662410558144707",
+                        "754893792099958855",
+                        "862744856920064011",
+                        "577913102151057422",
+                        "654078989152813107",
+                        "871909169295417396",
+                        "880916699552055316",
+                        "873258436446543902",
+                        "631624970438705210",
+                        "595393710909292574"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "944387081302441984",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-02-19T00:17:08.131000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bexperi(bass){0,}\\b/i"
             }
         },
         "notifications": true,
