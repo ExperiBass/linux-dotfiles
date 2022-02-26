@@ -77,3 +77,4 @@ alias zyn-fusion="zynaddsubfx"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+

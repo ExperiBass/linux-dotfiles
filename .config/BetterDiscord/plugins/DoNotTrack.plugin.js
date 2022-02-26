@@ -61,6 +61,7 @@ module.exports = (() => {
     return class DoNotTrack extends Plugin {
         onStart() {
             const Analytics = WebpackModules.getByProps("AnalyticEventConfigs");
+            console.log(Analytics)
             Patcher.instead(Analytics.default, "track", () => {});
 
             const Logger = window.__SENTRY__.logger;
