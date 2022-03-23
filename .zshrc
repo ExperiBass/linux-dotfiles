@@ -4,7 +4,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
 export PSPDEV=/usr/local/pspdev
 export PATH=$PATH:$HOME/.bin:$HOME/.npm-global/bin:$HOME/.deno/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PSPDEV/bin
 
-export ZSH="/home/gingka/.oh-my-zsh"
+export ZSH="/home/ging/.oh-my-zsh"
 
 # OMZ Config
 ZSH_THEME=clean
@@ -42,9 +42,9 @@ alias pipx='nocorrect pipx'
 alias stack='nocorrect stack'
 alias gh='nocorrect gh'
 alias nf='neofetch'
-alias yiff='nocorrect yay'
-
-
+alias yiff='nocorrect /usr/bin/yay'
+alias yay='echo "Use yiff!"'
+alias neocities='cd /home/gingka/Builds/neocities-ruby/bin && ./neocities && cd "-"'
 # I M P O R T S
 #
 # Development
