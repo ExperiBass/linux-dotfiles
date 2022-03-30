@@ -1,0 +1,15 @@
+#!/bin/sh
+
+ID="bcm5974"
+STATE=`xinput list-props $ID | grep 'Device Enabled' | awk '{print $4}'`
+
+if [ $STATE -eq 1 ]
+then
+    xinput disable $ID
+    # echo "Touchpad disabled."
+    notify-send -t 2000 'Touchpad Disabled.'
+else
+    xinput enable $ID
+    # echo "Touchpad enabled."
+    notify-send -t 2000 'Touchpad Enabled.'
+fi

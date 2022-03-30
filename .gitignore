@@ -35,3 +35,12 @@
 # PPSSPP
 !/.config/ppsspp/
 !/.config/ppsspp/*
+
+# Scripts
+!/.bin/
+!/.bin/bright
+!/.bin/chwp
+!/.bin/fanspeed.sh
+!/.bin/keyboard-backlight
+!/.bin/touchpadctl
+!/.bin/volume-ctl

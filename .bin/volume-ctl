@@ -1,0 +1,25 @@
+#!/bin/bash
+
+##############################################
+##       Author: Gingka/Ginger Pepper       ##
+##     https://experibassmusic.eth.link     ##
+##############################################
+
+STEP=5       # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
+
+notify() {
+    value=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -n1)
+    notify-send -t 2000 "Volume: ${value}"
+}
+if [[ $1 == [uU][pP] ]] ; then
+    pactl set-sink-volume @DEFAULT_SINK@ +"$STEP"%
+    $(notify)
+fi
+if [[ $1 == [dD][oO][wW][nN] ]] ; then
+    pactl set-sink-volume @DEFAULT_SINK@ -"$STEP"%
+    $(notify)
+fi
+if [[ $1 == [mM][uU][tT][eE] ]] ; then
+    pactl set-sink-volume @DEFAULT_SINK@ +"$STEP"%
+    $(notify)
+fi

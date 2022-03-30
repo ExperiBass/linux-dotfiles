@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NEW_PAPER=$1
+PAPER=~/.config/i3/custom/wallpaper.png
+
+rm $PAPER
+magick $NEW_PAPER -resize 2560x1600! $PAPER
+feh --bg-scale $PAPER
