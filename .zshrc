@@ -78,3 +78,6 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
+
+export PNPM_HOME="/home/ging/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
