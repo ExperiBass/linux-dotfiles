@@ -1,23 +1,26 @@
 {
-	"changeLogs": {
-		"BDFDB": "2.2.4",
-		"CharCounter": "1.5.7",
-		"CopyRawMessage": "1.1.2",
-		"RemoveBlockedUsers": "1.4.1",
-		"SplitLargeMessages": "1.7.2",
-		"StaffTag": "1.4.9",
-		"ThemeSettings": "1.3.3"
-	},
-	"choices": {
-		"toastPosition": "right"
-	},
-	"general": {
-		"showToasts": true,
-		"showSupportBadges": true,
-		"useChromium": false
-	},
-	"hashes": {
-		"0BDFDB.data.json": "5da134f5193d54039ec7a7bcb4ecadb4be418369",
-		"0BDFDB.raw.css": "afe854fd60051d750cebb99fb290bdce5c415f27"
+	"all": {
+		"changeLogs": {
+			"BDFDB": "2.3.0",
+			"CharCounter": "1.5.7",
+			"CopyRawMessage": "1.1.2",
+			"RemoveBlockedUsers": "1.4.5",
+			"SplitLargeMessages": "1.7.2",
+			"StaffTag": "1.5.0",
+			"ThemeSettings": "1.3.3"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"showToasts": true,
+			"showSupportBadges": true,
+			"useChromium": false,
+			"shareData": true
+		},
+		"hashes": {
+			"0BDFDB.data.json": "3070ac0fef4e7feb7f5dae53f54a9efbd69b2fbe",
+			"0BDFDB.raw.css": "afe854fd60051d750cebb99fb290bdce5c415f27"
+		}
 	}
 }

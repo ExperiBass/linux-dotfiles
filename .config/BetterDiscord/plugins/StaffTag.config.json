@@ -1,34 +1,39 @@
 {
-	"general": {
-		"useCrown": true,
-		"useRoleColor": true,
-		"useBlackFont": false,
-		"ignoreBots": false,
-		"ignoreMyself": false
-	},
-	"inputs": {
-		"ownOwnerTagName": "Owner",
-		"ownGroupOwnerTagName": "Group Owner",
-		"ownThreadCreatorTagName": "Creator",
-		"ownAdminTagName": "Admin",
-		"ownManagementTagName": "Management"
-	},
-	"tagPlaces": {
-		"chat": true,
-		"memberList": true,
-		"voiceList": true,
-		"userPopout": true,
-		"userProfile": true
-	},
-	"tagTypes": {
-		"owners": true,
-		"groupOwners": true,
-		"threadCreators": true,
-		"admins": true,
-		"managementG": true,
-		"managementC": true,
-		"managementR": true,
-		"managementU": true,
-		"managementM": true
+	"all": {
+		"general": {
+			"useCrown": true,
+			"useRoleColor": true,
+			"useBlackFont": false,
+			"ignoreBots": false,
+			"ignoreMyself": false
+		},
+		"inputs": {
+			"ownOwnerTagName": "Owner",
+			"ownGroupOwnerTagName": "Group Owner",
+			"ownThreadCreatorTagName": "Creator",
+			"ownAdminTagName": "Admin",
+			"ownManagementTagName": "Management"
+		},
+		"tagPlaces": {
+			"chat": true,
+			"memberList": true,
+			"voiceList": true,
+			"userPopout": true,
+			"userProfile": true
+		},
+		"tagTypes": {
+			"owners": true,
+			"groupOwners": true,
+			"threadCreators": true,
+			"admins": true,
+			"managementG": true,
+			"managementC": true,
+			"managementR": true,
+			"managementU": true,
+			"managementM": true,
+			"managementT": true,
+			"managementE": true,
+			"managementV": true
+		}
 	}
 }

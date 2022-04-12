@@ -1,5 +1,7 @@
 {
-	"sliders": {
-		"showPercentage": 75.594
+	"all": {
+		"sliders": {
+			"showPercentage": 0
+		}
 	}
 }
