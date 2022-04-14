@@ -9269,7 +9269,7 @@
                 "channel_id": "327997395650740225",
                 "components": [],
                 "content": "where's my favorite ginger",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "963556076295454720",
@@ -9292,10 +9292,927 @@
                 "mentions": [],
                 "nonce": "963556075674533888",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-04-12T21:47:50.595000+00:00",
                 "tts": false,
                 "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963615820884357210": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "c68f61fe2990e1981ce5eb41123ca207",
+                    "discriminator": "0318",
+                    "id": "296638148018962432",
+                    "username": "billynoise",
+                    "publicFlags": 128
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "ginger cats > all other cats",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963615820884357210",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "883035222738866176",
+                    "joined_at": "2018-01-23T13:22:40.505000+00:00",
+                    "mute": false,
+                    "nick": "matt",
+                    "roles": [
+                        "446517635929341952",
+                        "446517168436150273",
+                        "597106382998601728",
+                        "788265697405960192",
+                        "883035222738866176",
+                        "446517050748305413",
+                        "446517223272611852",
+                        "547567313189208082"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "963615820292816896",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T01:45:14.815000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963615854820474910": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "1bbb368f3bde274d77ed63b8491f5aa7",
+                    "discriminator": "2855",
+                    "id": "508867763780059148",
+                    "username": "Shin!",
+                    "publicFlags": 0
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "GINGER CATS are so ugly",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963615854820474910",
+                "member": {
+                    "avatar": {},
+                    "communication_disabled_until": {},
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": {},
+                    "joined_at": "2022-02-23T23:20:00.266000+00:00",
+                    "mute": false,
+                    "nick": {},
+                    "pending": false,
+                    "premium_since": {},
+                    "roles": [
+                        "446517168436150273",
+                        "446517050748305413"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [
+                    {
+                        "avatar": "c68f61fe2990e1981ce5eb41123ca207",
+                        "discriminator": "0318",
+                        "id": "296638148018962432",
+                        "username": "billynoise",
+                        "publicFlags": 128
+                    }
+                ],
+                "message_reference": {
+                    "channel_id": "405040270946861080",
+                    "guild_id": "346465284477026309",
+                    "message_id": "963615820884357210"
+                },
+                "nonce": "963615854124072960",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "c68f61fe2990e1981ce5eb41123ca207",
+                        "discriminator": "0318",
+                        "id": "296638148018962432",
+                        "public_flags": 128,
+                        "username": "billynoise"
+                    },
+                    "channel_id": "405040270946861080",
+                    "components": [],
+                    "content": "ginger cats > all other cats",
+                    "edited_timestamp": {},
+                    "embeds": [],
+                    "flags": 0,
+                    "id": "963615820884357210",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [],
+                    "pinned": false,
+                    "timestamp": "2022-04-13T01:45:14.815000+00:00",
+                    "tts": false,
+                    "type": 0
+                },
+                "timestamp": "2022-04-13T01:45:22.906000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963615908239142933": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "c68f61fe2990e1981ce5eb41123ca207",
+                    "discriminator": "0318",
+                    "id": "296638148018962432",
+                    "username": "billynoise",
+                    "publicFlags": 128
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "ginger cats are fuckin hilarious what do u mean",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963615908239142933",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "883035222738866176",
+                    "joined_at": "2018-01-23T13:22:40.505000+00:00",
+                    "mute": false,
+                    "nick": "matt",
+                    "roles": [
+                        "446517635929341952",
+                        "446517168436150273",
+                        "597106382998601728",
+                        "788265697405960192",
+                        "883035222738866176",
+                        "446517050748305413",
+                        "446517223272611852",
+                        "547567313189208082"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "963615907970547712",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T01:45:35.642000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963615941130850344": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "ea692d6b101150f78e2256405491e1ae",
+                    "discriminator": "3993",
+                    "id": "812921170491211807",
+                    "username": "QUANDALE DINGLE",
+                    "publicFlags": 0
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "ginger and black cats share one brain cell",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963615941130850344",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "912792218719371305",
+                    "joined_at": "2022-03-16T14:39:37.345000+00:00",
+                    "mute": false,
+                    "premium_since": "2022-03-17T13:48:04.796000+00:00",
+                    "roles": [
+                        "446517168436150273",
+                        "585531655301627906",
+                        "446517050748305413",
+                        "912792218719371304",
+                        "912792218719371305",
+                        "446517223272611852"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "963615940019224576",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T01:45:43.484000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963615999666565190": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "ea692d6b101150f78e2256405491e1ae",
+                    "discriminator": "3993",
+                    "id": "812921170491211807",
+                    "username": "QUANDALE DINGLE",
+                    "publicFlags": 0
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "I have a ginger a black cat and a tortie all have no brain",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963615999666565190",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "912792218719371305",
+                    "joined_at": "2022-03-16T14:39:37.345000+00:00",
+                    "mute": false,
+                    "premium_since": "2022-03-17T13:48:04.796000+00:00",
+                    "roles": [
+                        "446517168436150273",
+                        "585531655301627906",
+                        "446517050748305413",
+                        "912792218719371304",
+                        "912792218719371305",
+                        "446517223272611852"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "963615998651400192",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T01:45:57.440000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963620463785967646": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "f5e3ad508781c3bdef8819e70cff6008",
+                    "discriminator": "4536",
+                    "id": "226906676517666816",
+                    "username": "InfiniteGears",
+                    "publicFlags": 0
+                },
+                "channel_id": "810641714145525781",
+                "components": [],
+                "content": "Y'all should drink some ginger tea, it's good for your gut",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963620463785967646",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": {},
+                    "joined_at": "2022-03-22T18:28:09.319000+00:00",
+                    "mute": false,
+                    "roles": [
+                        "446517168436150273",
+                        "446517050748305413"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969791243745755136",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T02:03:41.769000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963630642627747941": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Ging you are beneath me",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963630642627747941",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969801423388672000",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T02:44:08.594000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963630919065952327": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Hey ging",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963630919065952327",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969801699906551808",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T02:45:14.502000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963635376063389707": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "a45d220f073f055e6a542ee1af5a2625",
+                    "discriminator": "3705",
+                    "id": "882050792549392434",
+                    "username": "Vuresd",
+                    "publicFlags": 0
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "*grabs Ging & throw em away*",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963635376063389707",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-20T02:27:06.877000+00:00",
+                    "mute": false,
+                    "roles": [
+                        "889333636862705725",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "963635375568322560",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T03:02:57.133000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963636650162913360": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "*ging me and vursed*",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963636650162913360",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969807430550552576",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T03:08:00.902000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963672134792654909": {
+                "guild_id": "346465284477026309",
+                "attachments": [],
+                "author": {
+                    "avatar": "a_0077b405b8bdab9a3a0f9ef33bef659d",
+                    "discriminator": "9073",
+                    "id": "488569068799131650",
+                    "username": "Moses",
+                    "publicFlags": 0
+                },
+                "channel_id": "405040270946861080",
+                "components": [],
+                "content": "POV:Your ginger",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963672134792654909",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": {},
+                    "joined_at": "2022-02-15T02:35:42.804000+00:00",
+                    "mute": false,
+                    "premium_since": "2022-02-15T03:13:39.567000+00:00",
+                    "roles": [
+                        "585531655301627906",
+                        "446517050748305413"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [
+                    {
+                        "avatar": "ce29ca4ae73d1b66a130669967901a65",
+                        "discriminator": "6118",
+                        "id": "850891067225931808",
+                        "username": "thatoneperson012345678910",
+                        "publicFlags": 0
+                    }
+                ],
+                "message_reference": {
+                    "channel_id": "405040270946861080",
+                    "guild_id": "346465284477026309",
+                    "message_id": "963672042614427669"
+                },
+                "nonce": "963672134087868416",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "ce29ca4ae73d1b66a130669967901a65",
+                        "discriminator": "6118",
+                        "id": "850891067225931808",
+                        "public_flags": 0,
+                        "username": "thatoneperson012345678910"
+                    },
+                    "channel_id": "405040270946861080",
+                    "components": [],
+                    "content": "Our mom. Communism",
+                    "edited_timestamp": {},
+                    "embeds": [],
+                    "flags": 0,
+                    "id": "963672042614427669",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [
+                        {
+                            "avatar": "a_0077b405b8bdab9a3a0f9ef33bef659d",
+                            "discriminator": "9073",
+                            "id": "488569068799131650",
+                            "public_flags": 0,
+                            "username": "Moses"
+                        }
+                    ],
+                    "message_reference": {
+                        "channel_id": "405040270946861080",
+                        "guild_id": "346465284477026309",
+                        "message_id": "963671962331267132"
+                    },
+                    "pinned": false,
+                    "timestamp": "2022-04-13T05:28:39.120000+00:00",
+                    "tts": false,
+                    "type": 19
+                },
+                "timestamp": "2022-04-13T05:29:01.097000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963684890715496498": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Ging I'm going to kiss you if you don't shut up",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963684890715496498",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969855670796943360",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T06:19:42.346000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963685039860768768": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "*kisses ging*",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963685039860768768",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969855820646842368",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T06:20:17.905000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963687288011882518": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "847488474805436458",
+                "components": [],
+                "content": "If I get to hear ging they get another awawa",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963687288011882518",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969858068495990784",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T06:29:13.906000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963690337975533589": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "847488474805436458",
+                "components": [],
+                "content": "Connor: *suddenly, ging is in a negative pressure chamber*",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963690337975533589",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "969861118623219712",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T06:41:21.074000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963690340198547456": {
+                "guild_id": "809045167670558720",
+                "application_id": "431544605209788416",
+                "attachments": [],
+                "author": {
+                    "avatar": {},
+                    "bot": true,
+                    "discriminator": "0000",
+                    "id": "963690339238051850",
+                    "username": "Connor"
+                },
+                "channel_id": "847488474805436458",
+                "components": [],
+                "content": "*suddenly, ging is in a negative pressure chamber*",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963690340198547456",
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "pinned": false,
+                "timestamp": "2022-04-13T06:41:21.604000+00:00",
+                "tts": false,
+                "type": 0,
+                "webhook_id": "963690339238051850",
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963938818346610730": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Ging",
+                "edited_timestamp": {},
+                "embeds": [],
+                "flags": 0,
+                "id": "963938818346610730",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "970109599514361856",
+                "pinned": false,
+                "referenced_message": {},
+                "timestamp": "2022-04-13T23:08:43.411000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963994315384823808": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "She'll only care if tiny ging is harmed",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "963994315384823808",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "970165095621459968",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-04-14T02:49:14.936000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963994410473881650": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Observe. *shoots tiny ging in the leg*",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "963994410473881650",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "970165191205453824",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-04-14T02:49:37.607000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963994613817958460": {
+                "guild_id": "809045167670558720",
+                "attachments": [],
+                "author": {
+                    "avatar": "20860e97f5ba44e32ddbeb4a9426f65b",
+                    "discriminator": "5660",
+                    "id": "405578698386046976",
+                    "username": "Kait Cobb",
+                    "publicFlags": 256
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "Connor: *picks tiny ging up immediately nursing their leg*",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "963994613817958460",
+                "member": {
+                    "deaf": false,
+                    "hoisted_role": "809084600541249557",
+                    "joined_at": "2021-09-09T02:59:38.673000+00:00",
+                    "mute": false,
+                    "nick": "Cutelyn Cobb",
+                    "roles": [
+                        "880353294818611200",
+                        "897694713484824637",
+                        "809084600541249557"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "970165394557894656",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-04-14T02:50:26.088000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "963994615856386058": {
+                "guild_id": "809045167670558720",
+                "application_id": "431544605209788416",
+                "attachments": [],
+                "author": {
+                    "avatar": "ff181f8c8265c56bd91d5352eafddc43",
+                    "bot": true,
+                    "discriminator": "0000",
+                    "id": "841628703121211412",
+                    "username": "Connor"
+                },
+                "channel_id": "809045167670558723",
+                "components": [],
+                "content": "*picks tiny ging up immediately nursing their leg*",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "963994615856386058",
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "pinned": false,
+                "timestamp": "2022-04-14T02:50:26.574000+00:00",
+                "tts": false,
+                "type": 0,
+                "webhook_id": "841628703121211412",
                 "_match": "/\\bging(ka|er){0,1}\\b/i"
             }
         },
