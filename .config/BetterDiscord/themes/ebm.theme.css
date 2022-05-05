@@ -17,6 +17,7 @@
   --success-color: #43b581;
   --danger-color: #982929;
   --url-color: #f0ad19;
+  --text-color: #5fdbf6;
   --background-image: transparent;
   --background-shading: 0%;
   --background-position: center;
@@ -99,3 +100,11 @@
 }
 
 /* Any custom CSS below here */
+
+.match-20K5f5, .overflow-1wOqNV, .username-h_Y3Us,
+ .subText-3Sk0zy, .closeButton-mupH76,
+ .desaturateUserColors-1O-G89, .clickable-31pE3P,
+ .activityText-ev7Z1T, .message-2CShn3 .markup-eYLPri,
+ .name-2m3Cms, .contents-3ca1mk, .textArea-2CLwUE, .input-2FSSDe {
+  color: var(--text-color);
+}
