@@ -63,8 +63,8 @@
   --dnd-color: #982929;
   --streaming-color: #593695;
   --offline-color: #808080;
-  --main-font: "Bicubik Nerd Font",/*"Triglavian \- Complete",*/ FiraCode Nerd Font;
-  --code-font: Bicubik Nerd Font, FiraCode Nerd Font;
+  --main-font: "supErphoniX2",/*"Triglavian \- Complete",*/ FiraCode Nerd Font;
+  --code-font: var(--main-font);
   --channels-width: 220px;
   --members-width: 240px;
   --backdrop-overlay: rgba(0,0,0,0.8);
