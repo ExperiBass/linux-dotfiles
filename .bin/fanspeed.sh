@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sensors | grep -E "fan" | awk '{print ($2+$13)/2 " RPM"}' 
+sensors | grep -E "fan" | tr "\n" " " | awk '{printf " %.0f", ($2+$13)/2}' 

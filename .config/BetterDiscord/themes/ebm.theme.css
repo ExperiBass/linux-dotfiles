@@ -12,11 +12,11 @@
 @import url('https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css');
 @import url('https://nyri4.github.io/Discolored/main.css');
 :root {
-  --main-color: #1B81F3;
-  --hover-color: #14268C;
+  --main-color: #076b81;
+  --hover-color: #ae7b0b;
   --success-color: #43b581;
   --danger-color: #982929;
-  --url-color: #1B81F3;
+  --url-color: #f0ad19;
   --background-image: transparent;
   --background-shading: 0%;
   --background-position: center;
@@ -29,7 +29,7 @@
   --background-grayscale: 0%;
   --background-invert: 0%;
   --background-blur: 0px;
-  --background-overlay: rgb(8,17,28,1);
+  --background-overlay: #000000;
   --user-popout-image: transparent;
   --user-popout-position: top right;
   --user-popout-size: cover;
@@ -63,7 +63,7 @@
   --dnd-color: #982929;
   --streaming-color: #593695;
   --offline-color: #808080;
-  --main-font: /*"Triglavian \- Complete",*/ Bicubik Nerd Font, FiraCode Nerd Font;
+  --main-font: "Bicubik Nerd Font",/*"Triglavian \- Complete",*/ FiraCode Nerd Font;
   --code-font: Bicubik Nerd Font, FiraCode Nerd Font;
   --channels-width: 220px;
   --members-width: 240px;
