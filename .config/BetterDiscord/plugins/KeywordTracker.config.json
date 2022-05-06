@@ -19153,12 +19153,12 @@
                     "id": "219453810664275968",
                     "username": "Ekoh6T9",
                     "publicFlags": 0,
-                    "avatarDecoration": null
+                    "avatarDecoration": {}
                 },
                 "channel_id": "854949177285148682",
                 "components": [],
                 "content": "God I hate the fact that getting ginger candies out of their wrappers is like fucking pulling a booger out someone else's nose",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "971993713981141052",
@@ -19193,8 +19193,372 @@
                 "mentions": [],
                 "nonce": "971993712873701376",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-05-06T04:36:00.183000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972199880833507398": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "6e4fc01e30c4cd4c54693cd2a03cae9e",
+                    "discriminator": "6119",
+                    "id": "217983711940050945",
+                    "username": "Res",
+                    "publicFlags": 640,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "Ok one more,\nGINGER SNAPED",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972199880833507398",
+                "member": {
+                    "avatar": "4635a88d59d62ee1b7d76bfa325361ef",
+                    "communication_disabled_until": null,
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "530362328416256010",
+                    "joined_at": "2022-02-01T04:35:04.734000+00:00",
+                    "mute": false,
+                    "nick": "Γεš",
+                    "pending": false,
+                    "premium_since": null,
+                    "roles": [
+                        "717057813146370049",
+                        "530362328416256010",
+                        "883025742793961483",
+                        "808742884995760178",
+                        "802966985603940374",
+                        "791776937667985438"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "972199879830929408",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-05-06T18:15:14.191000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972200835536789582": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "798719955a9c086070759d8f67591072",
+                    "discriminator": "2677",
+                    "id": "924793841385627679",
+                    "username": "yharom",
+                    "publicFlags": 0,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "Just drink Ginger ale",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972200835536789582",
+                "member": {
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "530362328416256010",
+                    "joined_at": "2022-03-13T06:07:07.005000+00:00",
+                    "mute": false,
+                    "roles": [
+                        "530362328416256010",
+                        "808742884995760178",
+                        "791776937667985438",
+                        "802966985603940374"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "978371613156179968",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-05-06T18:19:01.810000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972200990176591882": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "4ddfdb039f3ccb5fdbfebceb252b8544",
+                    "discriminator": "6891",
+                    "id": "129846588704161792",
+                    "username": "Dusk118",
+                    "publicFlags": 64,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "That’s an airline food thing for me. I never don’t get ginger ale when flying.",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972200990176591882",
+                "member": {
+                    "avatar": "2d5b1508fa8018327a85a5916e42df27",
+                    "communication_disabled_until": null,
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "966431780741726228",
+                    "joined_at": "2022-02-11T11:04:14.801000+00:00",
+                    "mute": false,
+                    "nick": "Dusk the Lovali",
+                    "pending": false,
+                    "premium_since": null,
+                    "roles": [
+                        "958727461955309568",
+                        "717057813146370049",
+                        "530362328416256010",
+                        "883025742793961483",
+                        "808742884995760178",
+                        "966431780741726228",
+                        "791776937667985438"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [
+                    {
+                        "avatar": "798719955a9c086070759d8f67591072",
+                        "discriminator": "2677",
+                        "id": "924793841385627679",
+                        "username": "yharom",
+                        "publicFlags": 0,
+                        "avatarDecoration": null
+                    }
+                ],
+                "message_reference": {
+                    "channel_id": "530351426833088514",
+                    "guild_id": "530351426833088512",
+                    "message_id": "972200835536789582"
+                },
+                "nonce": "972200989312417792",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "798719955a9c086070759d8f67591072",
+                        "avatar_decoration": null,
+                        "discriminator": "2677",
+                        "id": "924793841385627679",
+                        "public_flags": 0,
+                        "username": "yharom"
+                    },
+                    "channel_id": "530351426833088514",
+                    "components": [],
+                    "content": "Just drink Ginger ale",
+                    "edited_timestamp": null,
+                    "embeds": [],
+                    "flags": 0,
+                    "id": "972200835536789582",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [],
+                    "pinned": false,
+                    "timestamp": "2022-05-06T18:19:01.810000+00:00",
+                    "tts": false,
+                    "type": 0
+                },
+                "timestamp": "2022-05-06T18:19:38.679000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972201096841941132": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "798719955a9c086070759d8f67591072",
+                    "discriminator": "2677",
+                    "id": "924793841385627679",
+                    "username": "yharom",
+                    "publicFlags": 0,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "I just always drink ginger ale",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972201096841941132",
+                "member": {
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "530362328416256010",
+                    "joined_at": "2022-03-13T06:07:07.005000+00:00",
+                    "mute": false,
+                    "roles": [
+                        "530362328416256010",
+                        "808742884995760178",
+                        "791776937667985438",
+                        "802966985603940374"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [
+                    {
+                        "avatar": "4ddfdb039f3ccb5fdbfebceb252b8544",
+                        "discriminator": "6891",
+                        "id": "129846588704161792",
+                        "username": "Dusk118",
+                        "publicFlags": 64,
+                        "avatarDecoration": null
+                    }
+                ],
+                "message_reference": {
+                    "channel_id": "530351426833088514",
+                    "guild_id": "530351426833088512",
+                    "message_id": "972200990176591882"
+                },
+                "nonce": "978371876487168000",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "4ddfdb039f3ccb5fdbfebceb252b8544",
+                        "avatar_decoration": null,
+                        "discriminator": "6891",
+                        "id": "129846588704161792",
+                        "public_flags": 64,
+                        "username": "Dusk118"
+                    },
+                    "channel_id": "530351426833088514",
+                    "components": [],
+                    "content": "That’s an airline food thing for me. I never don’t get ginger ale when flying.",
+                    "edited_timestamp": null,
+                    "embeds": [],
+                    "flags": 0,
+                    "id": "972200990176591882",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [
+                        {
+                            "avatar": "798719955a9c086070759d8f67591072",
+                            "avatar_decoration": null,
+                            "discriminator": "2677",
+                            "id": "924793841385627679",
+                            "public_flags": 0,
+                            "username": "yharom"
+                        }
+                    ],
+                    "message_reference": {
+                        "channel_id": "530351426833088514",
+                        "guild_id": "530351426833088512",
+                        "message_id": "972200835536789582"
+                    },
+                    "pinned": false,
+                    "timestamp": "2022-05-06T18:19:38.679000+00:00",
+                    "tts": false,
+                    "type": 19
+                },
+                "timestamp": "2022-05-06T18:20:04.110000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972201153838321754": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "2d631aba47432e865afe8fc2136ad487",
+                    "discriminator": "3286",
+                    "id": "122444193497874434",
+                    "username": "Alvary Shade",
+                    "publicFlags": 0,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "ginger ale I use for nausea",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972201153838321754",
+                "member": {
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "530362328416256010",
+                    "joined_at": "2021-12-18T07:40:48.124000+00:00",
+                    "mute": false,
+                    "roles": [
+                        "530362328416256010",
+                        "808742884995760178",
+                        "791776937667985438"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "972201152718307328",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-05-06T18:20:17.699000+00:00",
+                "tts": false,
+                "type": 0,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
+            },
+            "972201196322439299": {
+                "guild_id": "530351426833088512",
+                "attachments": [],
+                "author": {
+                    "avatar": "878badcdb632458af26bbb5966ccabb9",
+                    "discriminator": "1024",
+                    "id": "656647938998534144",
+                    "username": "FromSkyToEnd",
+                    "publicFlags": 256,
+                    "avatarDecoration": null
+                },
+                "channel_id": "530351426833088514",
+                "components": [],
+                "content": "i once bought a double whisky and ginger ale on a plane, i felt like a gigachad",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "972201196322439299",
+                "member": {
+                    "avatar": "c42360f122e87d7e89e53340ee4a820e",
+                    "communication_disabled_until": null,
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": "530362328416256010",
+                    "joined_at": "2022-01-31T14:09:54.149000+00:00",
+                    "mute": false,
+                    "nick": "Skyy",
+                    "pending": false,
+                    "premium_since": null,
+                    "roles": [
+                        "958727461955309568",
+                        "717057813146370049",
+                        "530362328416256010",
+                        "805762231127900170",
+                        "883025742793961483",
+                        "808742884995760178",
+                        "791776937667985438"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "nonce": "978371977028829184",
+                "pinned": false,
+                "referenced_message": null,
+                "timestamp": "2022-05-06T18:20:27.828000+00:00",
                 "tts": false,
                 "type": 0,
                 "_match": "/\\bging(ka|er){0,1}\\b/i"

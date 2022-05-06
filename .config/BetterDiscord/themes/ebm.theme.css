@@ -115,7 +115,7 @@
 .icon-2xnN2Y, .linkButtonIcon-7rsZcu, .searchBarComponent-3N7dCG,
 .public-DraftEditorPlaceholder-inner, .timestamp-p1Df1m, .timestampInline-_lS3aK
 .topic-11NuQZ, svg:not(.ownerIcon-255uKo, .admin-Kv1Hp_),
-.expandable-3CaLeS {
+.expandable-3CaLeS, .blockquoteContainer-3VtvI1 {
   color: var(--main-color) !important;
 }
 
