@@ -46,3 +46,8 @@
 !/.bin/keyboard-backlight
 !/.bin/touchpadctl
 !/.bin/volume-ctl
+
+# Custom theme
+!/.themes/
+!/.themes/wipeout/
+!/.themes/wipeout/*

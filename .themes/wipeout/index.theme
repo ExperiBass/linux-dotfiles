@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Wipeout
+Type=X-GNOME-Metatheme
+Comment= Wipeout Pure Hacker skin clone
+Encoding=UTF-8
+GtkTheme=Wipeout
+IconTheme=Papirus-Dark
+CursorTheme=Adwaita
+CursorSize=24
