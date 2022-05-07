@@ -117,8 +117,11 @@
 .public-DraftEditorPlaceholder-inner, .timestamp-p1Df1m, .timestampInline-_lS3aK
 .topic-11NuQZ, svg:not(.ownerIcon-255uKo, .admin-Kv1Hp_, .closeIcon-1NwtbI),
 .expandable-3CaLeS, .blockquoteContainer-3VtvI1, .metadataSize-2A2s1T,
-.content-vSHmMD {
+.content-vSHmMD, .spoilerText-27bIiA {
   color: var(--main-color) !important;
+}
+.spoilerText-27bIiA.hidden-3B-Rum {
+  background: var(--main-color) !important;
 }
 
 .channelMention, .wrapper-1ZcZW-, .iconMention-3WxjBe,
