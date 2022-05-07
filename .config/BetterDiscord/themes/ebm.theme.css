@@ -101,6 +101,12 @@
 
 /* Any custom CSS below here */
 
+
+::selection {
+  color: var(--url-color);
+  background: var(--main-color);
+}
+
 .match-20K5f5, .overflow-1wOqNV, .username-h_Y3Us,
  .subText-3Sk0zy, .closeButton-mupH76,
  .desaturateUserColors-1O-G89, .clickable-31pE3P,
