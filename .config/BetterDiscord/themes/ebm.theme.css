@@ -108,13 +108,13 @@
  .name-2m3Cms, .contents-3ca1mk, .textArea-2CLwUE, .input-2FSSDe,
  .username-3JLfHz, .username-Qpc78p, .name-3Uvkvr, .actionIcon-2sw4Sl,
  .label-2gNW3x, .subtext-2GlkbE, .embedDescription-1DrJxZ,
- .title-17SveM, .typing-2J1mQU {
+ .title-17SveM, .typing-2J1mQU, .closeIcon-1NwtbI {
   color: var(--text-color) !important;
 }
 .discriminator-WV5K5s, .text-MPIeXO, .button-2BMPJJ, .icon-2W8DHg,
 .icon-2xnN2Y, .linkButtonIcon-7rsZcu, .searchBarComponent-3N7dCG,
 .public-DraftEditorPlaceholder-inner, .timestamp-p1Df1m, .timestampInline-_lS3aK
-.topic-11NuQZ, svg:not(.ownerIcon-255uKo, .admin-Kv1Hp_),
+.topic-11NuQZ, svg:not(.ownerIcon-255uKo, .admin-Kv1Hp_, .closeIcon-1NwtbI),
 .expandable-3CaLeS, .blockquoteContainer-3VtvI1 {
   color: var(--main-color) !important;
 }

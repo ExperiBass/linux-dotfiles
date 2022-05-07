@@ -43,8 +43,8 @@ alias stack='nocorrect stack'
 alias gh='nocorrect gh'
 alias nf='neofetch'
 alias yiff='nocorrect /usr/bin/yay'
-alias yay='echo "Use yiff!"'
-alias neocities='cd /home/gingka/Builds/neocities-ruby/bin && ./neocities && cd "-"'
+alias neocities='cd ~/Builds/neocities-ruby/bin && ./neocities && cd "-"'
+alias cp='cp -r'
 # I M P O R T S
 #
 # Development
