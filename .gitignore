@@ -51,3 +51,7 @@
 !/.themes/
 !/.themes/wipeout/
 !/.themes/wipeout/*
+!/.themes/wipeout/gtk-3.0/
+!/.themes/wipeout/gtk-3.0/*
+!/.themes/wipeout/gtk-3.0/assets/
+!/.themes/wipeout/gtk-3.0/assets/*
