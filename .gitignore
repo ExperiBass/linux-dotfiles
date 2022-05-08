@@ -27,8 +27,6 @@
 !/.config/vis/*
 !/.config/rofi/
 !/.config/rofi/*
-!/.config/rofi/scripts/
-!/.config/rofi/scripts/*
 
 # BetterDiscord
 !/.config/BetterDiscord/
@@ -50,6 +48,7 @@
 !/.bin/keyboard-backlight
 !/.bin/touchpadctl
 !/.bin/volume-ctl
+!/.bin/powermenu.sh
 
 # Custom theme
 !/.themes/
