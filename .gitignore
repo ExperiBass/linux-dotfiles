@@ -52,11 +52,21 @@
 
 # Custom theme
 !/.themes/
-!/.themes/wipeout/
-!/.themes/wipeout/*
-!/.themes/wipeout/metacity-1/
-!/.themes/wipeout/metacity-1/*
-!/.themes/wipeout/gtk-3.0/
-!/.themes/wipeout/gtk-3.0/*
-!/.themes/wipeout/gtk-3.0/assets/
-!/.themes/wipeout/gtk-3.0/assets/*
+!/.themes/wipeout-pure-hacker-clone/
+!/.themes/wipeout-pure-hacker-clone/*
+!/.themes/wipeout-pure-hacker-clone/assets/
+!/.themes/wipeout-pure-hacker-clone/assets/*
+!/.themes/wipeout-pure-hacker-clone/metacity-1/
+!/.themes/wipeout-pure-hacker-clone/metacity-1/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/assets/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/assets/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/assets/dist/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.0/assets/dist/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/assets/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/assets/*
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/assets/dist/
+!/.themes/wipeout-pure-hacker-clone/gtk-3.20/assets/dist/*
