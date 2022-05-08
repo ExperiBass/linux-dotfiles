@@ -3,13 +3,12 @@
 # Options for powermenu
 lock=" Lock"
 logout="﫼 Logout"
-shutdown="襤 Shutdown"
+shutdown="⏻ Shutdown"
 reboot=" Reboot"
 
 # Get answer from user via rofi
 selected_option=$(echo "$lock
 $logout
-$sleep
 $reboot
 $shutdown" | rofi -dmenu\
                   -i\
@@ -34,10 +33,6 @@ then
 elif [ "$selected_option" == "$reboot" ]
 then
     systemctl reboot
-elif [ "$selected_option" == "$sleep" ]
-then
-    amixer set Master mute
-    systemctl suspend
 else
     echo "No match"
 fi
