@@ -1,0 +1,101 @@
+{
+    "settings": {
+        "plugins": {
+            "BetterBotTags": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterCodeblocks": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterPictureInPicture": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterRoleColors": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "CharCounter": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "CopyRawMessage": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "DashToSpaceInChannelName": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "RemoveChatButtons": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "ServerCount": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "StaffTag": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "UserVoiceShow": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "VoiceUsersCounter": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            }
+        },
+        "themes": {
+            "ebm": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            }
+        },
+        "cancelDefault": false,
+        "_note": "The plugin uses the keycodes for detecting a match. The hotkeys are for display in settings only."
+    }
+}

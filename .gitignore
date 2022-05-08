@@ -25,6 +25,10 @@
 !/.config/kitty/*
 !/.config/vis/
 !/.config/vis/*
+!/.config/rofi/
+!/.config/rofi/*
+!/.config/rofi/scripts/
+!/.config/rofi/scripts/*
 
 # BetterDiscord
 !/.config/BetterDiscord/
