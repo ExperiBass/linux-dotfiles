@@ -23,7 +23,7 @@ $shutdown" | rofi -dmenu\
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    xbacklight -set 0 -steps 10 && i3lock --tiling -e -i ~/.config/i3/custom/wallpaper.png
+    ~/.bin/lock.sh
 elif [ "$selected_option" == "$logout" ]
 then
     i3-msg exit
