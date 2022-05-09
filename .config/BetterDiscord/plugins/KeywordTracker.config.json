@@ -19744,26 +19744,26 @@
                     "id": "454824413318348801",
                     "username": "WilburKit",
                     "publicFlags": 0,
-                    "avatarDecoration": null
+                    "avatarDecoration": {}
                 },
                 "channel_id": "845341653434892298",
                 "components": [],
                 "content": "Ekoh + Experi = Chaotic cuteness",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "972998022864699482",
                 "member": {
-                    "avatar": null,
-                    "communication_disabled_until": null,
+                    "avatar": {},
+                    "communication_disabled_until": {},
                     "deaf": false,
                     "flags": 0,
                     "hoisted_role": "845354008734597170",
                     "joined_at": "2022-05-01T20:04:23.457845+00:00",
                     "mute": false,
-                    "nick": null,
+                    "nick": {},
                     "pending": false,
-                    "premium_since": null,
+                    "premium_since": {},
                     "roles": [
                         "845351594148495370",
                         "854948300695535627",
@@ -19779,11 +19779,105 @@
                 "mentions": [],
                 "nonce": "972998076450996224",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-05-08T23:06:46.080000+00:00",
                 "tts": false,
                 "type": 0,
                 "_match": "/\\bexperi(bass){0,1}\\b/i"
+            },
+            "973274868093181962": {
+                "guild_id": "938465140414746664",
+                "attachments": [],
+                "author": {
+                    "avatar": "3f566a455bf040760bdb56bd37327ba5",
+                    "discriminator": "0826",
+                    "id": "312781634846064641",
+                    "username": "spinda",
+                    "publicFlags": 0,
+                    "avatarDecoration": null
+                },
+                "channel_id": "939224254736650320",
+                "components": [],
+                "content": "Showed this to my MIL and all she says. Still not a ginger 😂",
+                "edited_timestamp": null,
+                "embeds": [],
+                "flags": 0,
+                "id": "973274868093181962",
+                "member": {
+                    "deaf": false,
+                    "flags": 0,
+                    "hoisted_role": null,
+                    "joined_at": "2022-02-02T16:10:54.179000+00:00",
+                    "mute": false,
+                    "nick": "スピンダ",
+                    "roles": [
+                        "940080407184031744",
+                        "940080732120973352",
+                        "938485917130297425",
+                        "942831866216611889",
+                        "940080340301676595",
+                        "940080430806356019",
+                        "940080445637410867",
+                        "940080385184903259",
+                        "942831964333961276",
+                        "940080690995818526"
+                    ]
+                },
+                "mention_everyone": false,
+                "mention_roles": [],
+                "mentions": [],
+                "message_reference": {
+                    "channel_id": "939224254736650320",
+                    "guild_id": "938465140414746664",
+                    "message_id": "972983125862928384"
+                },
+                "nonce": "973274866578882560",
+                "pinned": false,
+                "referenced_message": {
+                    "attachments": [],
+                    "author": {
+                        "avatar": "3f566a455bf040760bdb56bd37327ba5",
+                        "avatar_decoration": null,
+                        "discriminator": "0826",
+                        "id": "312781634846064641",
+                        "public_flags": 0,
+                        "username": "spinda"
+                    },
+                    "channel_id": "939224254736650320",
+                    "components": [],
+                    "content": "https://www.radiotimes.com/tv/sci-fi/doctor-who-next-doctor-ncuti-gatwa-newsupdate/",
+                    "edited_timestamp": null,
+                    "embeds": [
+                        {
+                            "description": "After plenty of speculation, the next Time Lord has been revealed at last.",
+                            "provider": {
+                                "name": "Radio Times"
+                            },
+                            "thumbnail": {
+                                "height": 3000,
+                                "proxy_url": "https://images-ext-2.discordapp.net/external/31yJRWBqT8BXL65Ag5eBNDYMUKLm9krF1BYXIUFivrI/https/images.immediate.co.uk/production/volatile/sites/3/2035/01/GettyImages-1385052642-eafa75c.jpg",
+                                "url": "https://images.immediate.co.uk/production/volatile/sites/3/2035/01/GettyImages-1385052642-eafa75c.jpg",
+                                "width": 4500
+                            },
+                            "title": "Ncuti Gatwa announced as the next Doctor in Doctor Who",
+                            "type": "article",
+                            "url": "https://www.radiotimes.com/tv/sci-fi/doctor-who-next-doctor-ncuti-gatwa-newsupdate/"
+                        }
+                    ],
+                    "flags": 0,
+                    "id": "972983125862928384",
+                    "mention_everyone": false,
+                    "mention_roles": [],
+                    "mentions": [],
+                    "pinned": false,
+                    "timestamp": "2022-05-08T22:07:34.358000+00:00",
+                    "tts": false,
+                    "type": 0
+                },
+                "timestamp": "2022-05-09T17:26:51.126000+00:00",
+                "tts": false,
+                "type": 19,
+                "_match": "/\\bging(ka|er){0,1}\\b/i"
             }
         },
         "notifications": true,
