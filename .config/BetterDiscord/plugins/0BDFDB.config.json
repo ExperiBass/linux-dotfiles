@@ -4,7 +4,7 @@
 			"BDFDB": "2.3.2",
 			"CharCounter": "1.5.7",
 			"CopyRawMessage": "1.1.3",
-			"RemoveBlockedUsers": "1.4.8",
+			"RemoveBlockedUsers": "1.4.9",
 			"SplitLargeMessages": "1.7.2",
 			"StaffTag": "1.5.0",
 			"ThemeSettings": "1.3.3"
@@ -19,7 +19,7 @@
 			"shareData": true
 		},
 		"hashes": {
-			"0BDFDB.data.json": "113622f1dbce55eb5be501c2fc06aef0ff0d5727",
+			"0BDFDB.data.json": "91353ca0276c8193f12335645b6c64ff98684608",
 			"0BDFDB.raw.css": "e8d30d44e567f6a77ef4e90734c27c2b47306d20"
 		}
 	}
