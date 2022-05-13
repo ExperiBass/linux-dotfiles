@@ -13,7 +13,7 @@
 @import url('https://nyri4.github.io/Discolored/main.css');
 :root {
   --main-color: #076b81;
-  --hover-color: var(--main-color)/*#ae7b0b*/;
+  --hover-color: var(--main-color); /*#ae7b0b*/
   --success-color: #43b581;
   --danger-color: #982929;
   --url-color: #f0ad19;
@@ -136,4 +136,9 @@
 
 .scrollableContainer-15eg7h {
   border: 2px solid var(--main-color) !important;
+}
+
+.hoverRoll-2XwpoF, .usernameContainer-3PPkWq,
+.text-sm-medium-3Pz3rB, .text-sm-normal-3Zj3Iv {
+  font-family: var(--main-font) !important;
 }
