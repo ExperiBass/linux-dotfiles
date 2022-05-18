@@ -3787,6 +3787,58 @@
                     "812710370551660554": true
                 },
                 "enabled": true
+            },
+            "967097588258054244": {
+                "channels": {
+                    "967105391756451890": true,
+                    "967101473068552293": true,
+                    "967105458047447120": true,
+                    "967097589130473544": true,
+                    "967105014076145685": true,
+                    "967105036746371132": true,
+                    "967105071991111710": true,
+                    "968351246174019584": true,
+                    "968351281624277032": true,
+                    "973088442529488936": true,
+                    "973088508984049684": true,
+                    "973088731366055986": true
+                },
+                "enabled": true
+            },
+            "782749290219962370": {
+                "channels": {
+                    "782750797480984598": true,
+                    "926730254704345118": true,
+                    "796935699034144798": true,
+                    "782750064056991745": true
+                },
+                "enabled": true
+            },
+            "762084797262069782": {
+                "channels": {
+                    "794022483052331040": true,
+                    "794014657320321034": true,
+                    "762084798319427585": true,
+                    "762084798319427587": true,
+                    "798010680737005620": true,
+                    "807688989406265405": true,
+                    "829707174572851220": true,
+                    "966493718041473085": true
+                },
+                "enabled": true
+            },
+            "889908452896436298": {
+                "channels": {
+                    "889910306862690307": true,
+                    "889914897557782589": true,
+                    "889918622900846592": true,
+                    "895718591608004739": true,
+                    "889908453487820872": true,
+                    "903306631557808139": true,
+                    "926156227623407706": true,
+                    "897237445152759888": true
+                },
+                "enabled": true
             }
         },
         "enabled": true,
@@ -21033,12 +21085,12 @@
                     "id": "219453810664275968",
                     "username": "Ekoh6T9",
                     "publicFlags": 0,
-                    "avatarDecoration": null
+                    "avatarDecoration": {}
                 },
                 "channel_id": "845341653434892298",
                 "components": [],
                 "content": "Ging is going to take both sides I bet",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "976567019967229953",
@@ -21073,7 +21125,7 @@
                 "mentions": [],
                 "nonce": "976567020084527104",
                 "pinned": false,
-                "referenced_message": null,
+                "referenced_message": {},
                 "timestamp": "2022-05-18T19:28:41.298000+00:00",
                 "tts": false,
                 "type": 0,
@@ -21088,18 +21140,18 @@
                     "id": "454824413318348801",
                     "username": "WilburKit",
                     "publicFlags": 0,
-                    "avatarDecoration": null
+                    "avatarDecoration": {}
                 },
                 "channel_id": "845341653434892298",
                 "components": [],
                 "content": "Experi would never do such a thing",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "976567090448330844",
                 "member": {
-                    "avatar": null,
-                    "communication_disabled_until": null,
+                    "avatar": {},
+                    "communication_disabled_until": {},
                     "deaf": false,
                     "flags": 0,
                     "hoisted_role": "845354008734597170",
@@ -21107,7 +21159,7 @@
                     "mute": false,
                     "nick": "i subside off lettuce",
                     "pending": false,
-                    "premium_since": null,
+                    "premium_since": {},
                     "roles": [
                         "845351594148495370",
                         "854948300695535627",
@@ -21127,7 +21179,7 @@
                         "id": "219453810664275968",
                         "username": "Ekoh6T9",
                         "publicFlags": 0,
-                        "avatarDecoration": null
+                        "avatarDecoration": {}
                     }
                 ],
                 "message_reference": {
@@ -21141,7 +21193,7 @@
                     "attachments": [],
                     "author": {
                         "avatar": "a262b51a7c55199e423ad8e3f65beb90",
-                        "avatar_decoration": null,
+                        "avatar_decoration": {},
                         "discriminator": "9829",
                         "id": "219453810664275968",
                         "public_flags": 0,
@@ -21150,7 +21202,7 @@
                     "channel_id": "845341653434892298",
                     "components": [],
                     "content": "Ging is going to take both sides I bet",
-                    "edited_timestamp": null,
+                    "edited_timestamp": {},
                     "embeds": [],
                     "flags": 0,
                     "id": "976567019967229953",
@@ -21176,18 +21228,18 @@
                     "id": "770964305536876565",
                     "username": "pandicorn",
                     "publicFlags": 256,
-                    "avatarDecoration": null
+                    "avatarDecoration": {}
                 },
                 "channel_id": "751504483355197480",
                 "components": [],
                 "content": "I am a ginger",
-                "edited_timestamp": null,
+                "edited_timestamp": {},
                 "embeds": [],
                 "flags": 0,
                 "id": "976596546734936114",
                 "member": {
-                    "avatar": null,
-                    "communication_disabled_until": null,
+                    "avatar": {},
+                    "communication_disabled_until": {},
                     "deaf": false,
                     "flags": 0,
                     "hoisted_role": "741433237510815853",
@@ -21195,7 +21247,7 @@
                     "mute": false,
                     "nick": "Alex the depressed shit",
                     "pending": false,
-                    "premium_since": null,
+                    "premium_since": {},
                     "roles": [
                         "750374191425126400",
                         "745425664156369026",
@@ -21236,7 +21288,7 @@
                         "id": "729884586552590356",
                         "username": "❤Supportive Pansexual❤",
                         "publicFlags": 0,
-                        "avatarDecoration": null
+                        "avatarDecoration": {}
                     }
                 ],
                 "message_reference": {
@@ -21250,7 +21302,7 @@
                     "attachments": [],
                     "author": {
                         "avatar": "f1adad2d171f69e7f0af9818d0149be3",
-                        "avatar_decoration": null,
+                        "avatar_decoration": {},
                         "discriminator": "5120",
                         "id": "729884586552590356",
                         "public_flags": 0,
@@ -21259,7 +21311,7 @@
                     "channel_id": "751504483355197480",
                     "components": [],
                     "content": "**I will steal thy soul**",
-                    "edited_timestamp": null,
+                    "edited_timestamp": {},
                     "embeds": [],
                     "flags": 0,
                     "id": "976596472021799002",

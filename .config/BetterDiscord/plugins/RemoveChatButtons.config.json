@@ -9,10 +9,10 @@
         "stickerButton": true,
         "emojiButton": false,
         "attachButton": false,
-        "cssOnly": false,
+        "cssOnly": true,
         "dms": {
             "friendsTab": false,
-            "premiumTab": false
+            "premiumTab": true
         }
     }
 }
