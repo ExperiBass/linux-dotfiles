@@ -5325,6 +5325,7 @@
 		}
 	},
 	"BDFDB_Patrons": {
+		"870962330417102919": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "gobber (pobge)"},
 		"335997977938100226": 	{"active": true,	"tier": "t3",	"text": "Cloudy Hub Owner",							"color": "",			"id": "Synax (DaBa)"},
 		"558825053668507650": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "duh (AshAj)"},
 		"296567130952826880": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "sukumizu (tekki)"},
@@ -5338,7 +5339,7 @@
 		"155552545782235137": 	{"active": true,	"tier": "t3",	"text": "i hate everything about u",				"color": "",			"id": "Umbra (RaKa)"},
 		"824768928369606667": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "Kubox (HajJa)"},
 		"507464069100601363": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "Cracky (MiPo)"},
-		"264486632525135883": 	{"active": true,	"tier": "t3",	"text": "",											"color": "",			"id": "strix (A1C)"},
+		"264486632525135883": 	{"active": true,	"tier": "t3",	"text": "Mr. Morale",										"color": "",			"id": "strix (A1C)"},
 		"363785301195358221": 	{"active": true,	"tier": "t2",	"text": "",											"color": "",			"id": "TRENT (KABEL)"},
 		"620397524494057513": 	{"active": true,	"tier": "t3",	"text": "",											"color": "",			"id": "FUSL"}
 	},

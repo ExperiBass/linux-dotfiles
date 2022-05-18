@@ -107,14 +107,14 @@
   background: var(--main-color);
 }
 
-.match-20K5f5, .overflow-1wOqNV, .username-h_Y3Us,
-  .subText-3Sk0zy, .clickable-31pE3P,
-  .activityText-ev7Z1T, .message-2CShn3 .markup-eYLPri,
+.match-20K5f5, .overflow-1wOqNV,
+  .subText-3Sk0zy, .activityText-ev7Z1T, .message-2CShn3 .markup-eYLPri,
   .name-2m3Cms, .contents-3ca1mk, .textArea-2CLwUE, .input-2FSSDe,
   .username-3JLfHz, .username-Qpc78p, .name-3Uvkvr, .actionIcon-2sw4Sl,
   .label-2gNW3x, .subtext-2GlkbE, .embedDescription-1DrJxZ,
-  .title-17SveM, .typing-2J1mQU, button, span,
-  .metadataName-1KMZtB, .desaturateUserColors-1O-G89 {
+  .title-17SveM, .typing-2J1mQU, button,
+  span:not(.desaturateUserColors-1O-G89, .username-h_Y3Us),
+  .metadataName-1KMZtB {
   color: var(--text-color) !important;
 }
 .discriminator-WV5K5s, .text-MPIeXO, .button-2BMPJJ, .linkButtonIcon-7rsZcu,
