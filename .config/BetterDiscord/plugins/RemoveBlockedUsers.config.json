@@ -5,19 +5,19 @@
 			"voiceChat": true
 		},
 		"places": {
+			"activity": true,
+			"autocompletes": true,
+			"channelList": true,
+			"inbox": true,
+			"memberList": true,
+			"mentions": true,
 			"messages": true,
 			"pins": true,
-			"inbox": true,
-			"replies": true,
-			"mentions": true,
 			"reactions": true,
-			"autocompletes": true,
-			"memberList": true,
-			"voiceList": true,
-			"voiceChat": true,
-			"channelList": true,
 			"recentDms": true,
-			"activity": true
+			"replies": true,
+			"voiceChat": false,
+			"voiceList": false
 		}
 	}
 }
