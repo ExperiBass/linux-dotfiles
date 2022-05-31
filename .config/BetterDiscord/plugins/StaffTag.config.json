@@ -1,11 +1,11 @@
 {
 	"all": {
 		"general": {
-			"useCrown": true,
-			"useRoleColor": true,
+			"ignoreBots": true,
+			"ignoreMyself": false,
 			"useBlackFont": false,
-			"ignoreBots": false,
-			"ignoreMyself": false
+			"useCrown": true,
+			"useRoleColor": true
 		},
 		"inputs": {
 			"ownOwnerTagName": "Owner",
@@ -22,18 +22,18 @@
 			"userProfile": true
 		},
 		"tagTypes": {
-			"owners": true,
-			"groupOwners": true,
-			"threadCreators": true,
 			"admins": true,
-			"managementG": true,
+			"groupOwners": true,
 			"managementC": true,
-			"managementR": true,
-			"managementU": true,
-			"managementM": true,
-			"managementT": true,
 			"managementE": true,
-			"managementV": true
+			"managementG": true,
+			"managementM": true,
+			"managementR": true,
+			"managementT": true,
+			"managementU": true,
+			"managementV": true,
+			"owners": true,
+			"threadCreators": true
 		}
 	}
 }

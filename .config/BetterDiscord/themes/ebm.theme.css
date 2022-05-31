@@ -113,7 +113,7 @@
   .username-3JLfHz, .username-Qpc78p, .name-3Uvkvr, .actionIcon-2sw4Sl,
   .label-2gNW3x, .subtext-2GlkbE, .embedDescription-1DrJxZ,
   .title-17SveM, .typing-2J1mQU, button,
-  span:not(.desaturateUserColors-1O-G89, .username-h_Y3Us),
+  span:not(.desaturateUserColors-1O-G89, .username-h_Y3Us, .ping-2IpLcU),
   .metadataName-1KMZtB {
   color: var(--text-color) !important;
 }
