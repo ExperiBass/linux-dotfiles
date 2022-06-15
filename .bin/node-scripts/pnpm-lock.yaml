@@ -4,12 +4,14 @@ specifiers:
   '@mempool/mempool.js': ^2.3.0
   axios: ^0.27.2
   chalk: 4.1.2
+  filewatcher: ^3.0.1
   numeral: ^2.0.6
 
 dependencies:
   '@mempool/mempool.js': 2.3.0
   axios: 0.27.2
   chalk: 4.1.2
+  filewatcher: 3.0.1
   numeral: 2.0.6
 
 packages:
@@ -79,9 +81,19 @@ packages:
       delayed-stream: 1.0.0
     dev: false
 
+  /debounce/1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
+    dev: false
+
   /delayed-stream/1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
+    dev: false
+
+  /filewatcher/3.0.1:
+    resolution: {integrity: sha512-Fro8py2B8EJupSP37Kyd4kjKZLr+5ksFq7Vbw8A392Z15Unq8016SPUDvO/AsDj5V6bbPk98PTAinpc5YhPbJw==}
+    dependencies:
+      debounce: 1.2.1
     dev: false
 
   /follow-redirects/1.15.1:

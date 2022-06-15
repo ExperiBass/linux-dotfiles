@@ -101,7 +101,7 @@
             }
         },
         "themes": {
-            "ebm": {
+            "sathum": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,
@@ -109,7 +109,7 @@
                 "keycode": 82
             }
         },
-        "cancelDefault": false,
+        "cancelDefault": true,
         "_note": "The plugin uses the keycodes for detecting a match. The hotkeys are for display in settings only."
     }
 }
