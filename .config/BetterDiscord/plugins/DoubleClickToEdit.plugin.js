@@ -1,82 +1,100 @@
 /**
- * @name DoubleClickToEdit
- * @author Farcrada
- * @version 9.3.6
+ * @name Double Click To Edit
+ * @author Farcrada, original idea by Jiiks
+ * @version 9.4.5
  * @description Double click a message you wrote to quickly edit it.
  * 
+ * @invite qH6UWCwfTu
  * @website https://github.com/Farcrada/DiscordPlugins/
  * @source https://github.com/Farcrada/DiscordPlugins/blob/master/Double-click-to-edit/DoubleClickToEdit.plugin.js
  * @updateUrl https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js
 */
 
 /** @type {typeof import("react")} */
-const React = BdApi.React;
+const React = BdApi.React,
 
-const config = {
-	info: {
-		name: "Double Click To Edit",
-		id: "DoubleClickToEdit",
-		description: "Double click a message you wrote to quickly edit it",
-		version: "9.3.6",
-		author: "Farcrada",
-		updateUrl: "https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js"
-	}
-};
+	{ Webpack, Webpack: { Filters }, Data } = BdApi,
 
-const blacklist = [
-	//Object
-	"video",
-	"emoji",
-	//Classes
-	"content",
-	"reactionInner"
-];
+	config = {
+		info: {
+			name: "Double Click To Edit",
+			id: "DoubleClickToEdit",
+			description: "Double click a message you wrote to quickly edit it",
+			version: "9.4.5",
+			author: "Farcrada",
+			updateUrl: "https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js"
+		}
+	},
+
+	blacklist = [
+		//Object
+		"video",
+		"emoji",
+		//Classes
+		"content",
+		"reactionInner"
+	];
 
 
 module.exports = class DoubleClickToEdit {
 
-	//I like my spaces. 
-	getName() { return config.info.name; }
-	getAuthor() { return `${config.info.author}, original idea by Jiiks`; }
-
 
 	load() {
 		try { global.ZeresPluginLibrary.PluginUpdater.checkForUpdate(config.info.name, config.info.version, config.info.updateUrl); }
-		catch (err) { console.error(this.getName(), "Failed to reach the ZeresPluginLibrary for Plugin Updater.", err); }
+		catch (err) { console.error(config.info.name, "Failed to reach the ZeresPluginLibrary for Plugin Updater.", err); }
 	}
 
 	start() {
 		try {
 			//Classes
-			this.selectedClass = BdApi.findModuleByProps("message", "selected").selected;
-			this.messagesWrapper = BdApi.findModuleByProps("empty", "messagesWrapper").messagesWrapper;
+			this.selectedClass = Webpack.getModule(Filters.byProps("message", "selected")).selected;
+			this.messagesWrapper = Webpack.getModule(Filters.byProps("empty", "messagesWrapper")).messagesWrapper;
+
+			//Copy to clipboard
+			this.copyToClipboard = Webpack.getModule(Filters.byProps("clipboard", "app")).clipboard.copy;
 
 			//Copy to clipboard
 			this.copyToClipboard = BdApi.findModuleByProps("clipboard").clipboard.copy;
 
 			//Reply functions
-			this.replyToMessage = BdApi.findModule(m => m.toString().includes("_.S.dispatchToLastSubscribed(S.CkL.TEXTAREA_FOCUS)"));
-			this.getChannel = BdApi.findModuleByProps("getChannel", "getDMFromUserId").getChannel;
+			this.replyToMessage = Webpack.getModule(m => m?.toString?.()?.replace('\n', '')?.search(/(channel:[\w|\w],message:[\w|\w],shouldMention:!)/) > -1, { searchExports: true })
+			this.getChannel = Webpack.getModule(Filters.byProps("getChannel", "getDMFromUserId")).getChannel;
 
 			//Stores
-			this.MessageStore = BdApi.findModuleByProps("receiveMessage", "editMessage");
-			this.CurrentUserStore = BdApi.findModuleByProps("getCurrentUser");
+			this.MessageStore = Webpack.getModule(Filters.byProps("receiveMessage", "editMessage"));
+			this.CurrentUserStore = Webpack.getModule(Filters.byProps("getCurrentUser"));
 
 			//Settings
-			this.SwitchItem = BdApi.findModule(m => m.toString().includes("t=e.value,r=e.disabled"))
+			const filter = Webpack.Filters.byStrings(`["tag","children","className","faded","disabled","required","error"]`),
+				target = Webpack.getModule(m => Object.values(m).some(filter));
+			this.FormTitle = target[Object.keys(target).find(k => filter(target[k]))];
+			this.RadioItem = Webpack.getModule(m => m?.Sizes?.NONE, { searchExports: true });
+			this.SwitchItem = Webpack.getModule(Filters.byStrings("=e.note", "checked:"), { searchExports: true });
+
 
 			//Events
 			global.document.addEventListener('dblclick', this.doubleclickFunc);
 
-			this.doubleClickToReplySetting = BdApi.loadData(config.info.id, "doubleClickToReplySetting") ?? false;
+			//Load settings
+			//Edit
+			this.doubleClickToEditModifier = Data.load(config.info.id, "doubleClickToEditModifier") ?? false;
+			this.editModifier = Data.load(config.info.id, "editModifier") ?? "shift";
+			//Reply
+			this.doubleClickToReply = Data.load(config.info.id, "doubleClickToReply") ?? false;
+			this.doubleClickToReplyModifier = Data.load(config.info.id, "doubleClickToReplyModifier") ?? false;
+			this.replyModifier = Data.load(config.info.id, "replyModifier") ?? "shift";
+			//Copy
+			this.doubleClickToCopy = Data.load(config.info.id, "doubleClickToCopy") ?? false;
+			this.copyModifier = Data.load(config.info.id, "copyModifier") ?? "shift";
+
 		}
 		catch (err) {
 			try {
-				console.error("Attempting to stop after starting error...", err)
+				console.error("Attempting to stop after starting error...", err);
 				this.stop();
 			}
 			catch (err) {
-				console.error(this.getName() + ".stop()", err);
+				console.error(config.info.name + ".stop()", err);
 			}
 		}
 	}
@@ -92,21 +110,119 @@ module.exports = class DoubleClickToEdit {
 		//which also makes it an anonymous functional component;
 		//Pretty neat.
 		return () => {
-			const [state, setState] = React.useState(this.doubleClickToReplySetting);
+			//Edit
+			const [editEnableModifier, setEditEnableModifier] = React.useState(this.doubleClickToEditModifier),
+				[editModifier, setEditModifier] = React.useState(this.editModifier),
+				//Reply
+				[reply, setReply] = React.useState(this.doubleClickToReply),
+				[replyEnableModifier, setReplyEnableModifier] = React.useState(this.doubleClickToReplyModifier),
+				[replyModifier, setReplyModifier] = React.useState(this.replyModifier),
+				//Copy
+				[copy, setCopy] = React.useState(this.doubleClickToCopy),
+				[copyModifier, setCopyModifier] = React.useState(this.copyModifier);
 
-			return React.createElement(this.SwitchItem, {
-				//The state that is loaded with the default value
-				value: state,
-				note: "Enable to double click another's message and start replying.",
-				//Since onChange passes the current state we can simply invoke it as such
-				onChange: (newState) => {
-					//Saving the new state
-					this.doubleClickToReplySetting = newState;
-					BdApi.saveData(config.info.id, "doubleClickToReplySetting", newState);
-					setState(newState);
-				}
-				//Discord Is One Of Those
-			}, "Enable Replying");
+			return [
+				//Edit
+				React.createElement(this.SwitchItem, {
+					//The state that is loaded with the default value
+					value: editEnableModifier,
+					note: "Enable modifier for double clicking to edit",
+					//Since onChange passes the current state we can simply invoke it as such
+					onChange: (newState) => {
+						//Saving the new state
+						this.doubleClickToEditModifier = newState;
+						Data.save(config.info.id, "doubleClickToEditModifier", newState);
+						setEditEnableModifier(newState);
+					}
+					//Discord Is One Of Those
+				}, "Enable Edit Modifier"),
+				React.createElement(this.FormTitle, {
+					disabled: !editEnableModifier,
+					tag: "h3"
+				}, "Modifer to hold to edit a message"),
+				React.createElement(this.RadioItem, {
+					disabled: !editEnableModifier,
+					value: editModifier,
+					options: [
+						{ name: "Shift", value: "shift" },
+						{ name: "Ctrl", value: "ctrl" },
+						{ name: "Alt", value: "alt" }
+					],
+					onChange: (newState) => {
+						this.editModifier = newState.value;
+						Data.save(config.info.id, "editModifier", newState.value);
+						setEditModifier(newState.value);
+					}
+				}),
+
+				//Reply
+				React.createElement(this.SwitchItem, {
+					value: reply,
+					note: "Double click another's message and start replying.",
+					onChange: (newState) => {
+						this.doubleClickToReply = newState;
+						Data.save(config.info.id, "doubleClickToReply", newState);
+						setReply(newState);
+					}
+				}, "Enable Replying"),
+				React.createElement(this.SwitchItem, {
+					disabled: !reply,
+					value: replyEnableModifier,
+					note: "Enable modifier for double clicking to reply",
+					onChange: (newState) => {
+						this.doubleClickToReplyModifier = newState;
+						Data.save(config.info.id, "doubleClickToReplyModifier", newState);
+						setReplyEnableModifier(newState);
+					}
+				}, "Enable Reply Modifier"),
+				React.createElement(this.FormTitle, {
+					disabled: (!reply || !replyEnableModifier),
+					tag: "h3"
+				}, "Modifier to hold when replying to a message"),
+				React.createElement(this.RadioItem, {
+					disabled: (!reply || !replyEnableModifier),
+					value: replyModifier,
+					options: [
+						{ name: "Shift", value: "shift" },
+						{ name: "Ctrl", value: "ctrl" },
+						{ name: "Alt", value: "alt" }
+					],
+					onChange: (newState) => {
+						this.replyModifier = newState.value;
+						Data.save(config.info.id, "replyModifier", newState.value);
+						setReplyModifier(newState.value);
+					}
+				}),
+
+				//Copy
+				React.createElement(this.SwitchItem, {
+					value: copy,
+					note: "Copy selection before entering edit-mode.",
+					onChange: (newState) => {
+						this.doubleClickToCopy = newState;
+						Data.save(config.info.id, "doubleClickToCopy", newState);
+						setCopy(newState);
+					}
+				}, "Enable Copying"),
+				React.createElement(this.FormTitle, {
+					disabled: !copy,
+					tag: "h3"
+				}, "Modifier to hold before copying text"),
+				React.createElement(this.RadioItem, {
+					disabled: !copy,
+					value: copyModifier,
+					options: [
+						{ name: "Shift", value: "shift" },
+						{ name: "Ctrl", value: "ctrl" },
+						{ name: "Alt", value: "alt" }
+					],
+					onChange: (newState) => {
+						this.copyModifier = newState.value;
+						Data.save(config.info.id, "copyModifier", newState.value);
+						setCopyModifier(newState.value);
+					}
+				})
+			];
 		}
 	}
 
@@ -132,21 +248,45 @@ module.exports = class DoubleClickToEdit {
 		if (!instance)
 			return;
 
-		//When selecting text it might be handy to have it auto-copy.
-		if (this.copyBeforeAction)
-			if (this.copyBeforeActionModifier)
-				this.copyToClipboard(document.getSelection().toString());
+		//When selecting text it might be useful to copy.
+		const copyKeyHeld = this.checkForModifier(this.doubleClickToCopy, this.copyModifier, e);
+		if (copyKeyHeld)
+			this.copyToClipboard(document.getSelection().toString());
 
 		//The message instance is filled top to bottom, as it is in view.
 		//As a result, "baseMessage" will be the actual message you want to address. And "message" will be the reply.
 		//Maybe the message has a reply, so check if "baseMessage" exists and otherwise fallback on "message".
 		const message = this.getValueFromKey(instance, "baseMessage") ?? this.getValueFromKey(instance, "message");
 
-		if (message)
-			if (message.author.id === this.CurrentUserStore.getCurrentUser().id)
-				this.MessageStore.startEditMessage(message.channel_id, message.id, message.content);
-			else if (this.doubleClickToReplySetting)
-				this.replyToMessage(this.getChannel(message.channel_id), message, e);
+		if (!message)
+			return;
+
+		//Now we do the same thing with the edit and reply modifier
+		const editKeyHeld = this.checkForModifier(this.doubleClickToEditModifier, this.editModifier, e),
+			replyKeyHeld = this.checkForModifier(this.doubleClickToReplyModifier, this.replyModifier, e);
+
+		//If a modifier is enabled, check if the key is held, otherwise ignore.
+		if ((this.doubleClickToEditModifier ? editKeyHeld : true) && message.author.id === this.CurrentUserStore.getCurrentUser().id)
+			this.MessageStore.startEditMessage(message.channel_id, message.id, message.content);
+		else if ((this.doubleClickToReplyModifier ? replyKeyHeld : true) && this.doubleClickToReply)
+			this.replyToMessage(this.getChannel(message.channel_id), message, e);
+	}
+
+	/**
+	 * 
+	 * @param {boolean} enabled Is the modifier enabled
+	 * @param {string} modifier Modifier key to be checked for
+	 * @param {Event} event The event checked against
+	 * @returns {boolean} Whether the modifier is enabled and the modifier is pressed
+	 */
+	checkForModifier(enabled, modifier, event) {
+		if (enabled)
+			switch (modifier) {
+				case "shift": return event.shiftKey;
+				case "ctrl": return event.ctrlKey;
+				case "alt": return event.altKey;
+			}
+		return false;
 	}
 
 	getValueFromKey(instance, searchkey) {

@@ -1,18 +1,26 @@
 {
     "currentVersionInfo": {
-        "version": "1.2.3",
+        "version": "1.5.3",
         "hasShownChangelog": true
     },
     "settings": {
-        "giftButton": true,
-        "gifButton": true,
-        "stickerButton": true,
         "emojiButton": false,
+        "stickerButton": true,
+        "gifButton": true,
+        "giftButton": true,
         "attachButton": false,
-        "cssOnly": true,
         "dms": {
             "friendsTab": false,
-            "premiumTab": true
-        }
+            "premiumTab": true,
+            "snowsgivingTab": true
+        },
+        "channels": {
+            "publicBadge": true,
+            "boostBar": true
+        },
+        "compatibility": {
+            "invisibleTypingButton": false
+        },
+        "cssOnly": true
     }
 }

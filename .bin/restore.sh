@@ -46,31 +46,4 @@ yay -S --needed --nocleanmenu --nodiffmenu --noeditmenu --noremovemake \
     - < "$aurpkglist"
 
 echo "Compiling kernel..."
-# https://wiki.t2linux.org/guides/kernel/
-export MAKEFLAGS=-j$(nproc)
-cd ~/Builds/kernel || exit 1
-git clone --depth=1 https://github.com/Redecorating/mbp-16.1-linux-wifi patches
-source patches/PKGBUILD
-wget https://www.kernel.org/pub/linux/kernel/v"${pkgver//.*}".x/linux-"${pkgver}".tar.xz
-tar xf "$_srcname".tar.xz
-cd "$_srcname" || exit 1
-git clone --depth=1 https://github.com/t2linux/apple-bce-drv drivers/staging/apple-bce
-git clone --depth=1 https://github.com/Redecorating/apple-ib-drv drivers/staging/apple-ibridge # Redecoratings patch works
-for patch in ../patches/*.patch; do
-    patch -Np1 < "$patch"
-done
-zcat /proc/config.gz > .config
-make olddefconfig
-scripts/config --module apple-ibridge
-scripts/config --module apple-bce
-make
-make modules_install
-make install
-mkinitcpio -k /boot/vmlinuz -c /etc/mkinitcpio.conf -g /boot/initramfs.img
-grub-mkconfig -o /boot/grub/grub.cfg
-
-echo "Removing unneeded/broken packages..."
-yay -Rns --noconfirm xf86-video-intel linux-t2 linux-t2-headers
-yay -Rdd pipewire wireplumber pipewire-alsa
-
-echo "Done."
+~/.bin/buildkernel.sh

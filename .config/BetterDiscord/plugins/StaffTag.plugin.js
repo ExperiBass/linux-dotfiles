@@ -2,7 +2,7 @@
  * @name StaffTag
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.5.6
+ * @version 1.5.9
  * @description Adds a Crown/Tag to Server Owners (or Admins/Management)
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -88,15 +88,17 @@ module.exports = (_ => {
 		
 		return class StaffTag extends Plugin {
 			onLoad () {
-				this.patchedModules = {
-					after: {
-						MemberListItem: "render",
-						MessageUsername: "default",
-						VoiceUser: "render",
-						NameTag: "default",
-						UsernameSection: "default",
-						UserPopoutInfo: "UserPopoutInfo"
-					}
+				
+				this.modulePatches = {
+					before: [
+						"MessageHeader"
+					],
+					after: [
+						"MemberListItem",
+						"NameTag",
+						"UsernameSection",
+						"VoiceUser"
+					]
 				};
 				
 				this.defaults = {
@@ -268,9 +270,9 @@ module.exports = (_ => {
 				}
 			}
 
-			processMessageUsername (e) {
+			processMessageHeader (e) {
 				if (!e.instance.props.message || !this.settings.tagPlaces.chat) return;
-				let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {name: "Popout"});
+				let [children, index] = BDFDB.ReactUtils.findParent(e.instance.props.username, {filter: n => n && n.props && typeof n.props.renderPopout == "function"});
 				if (index == -1) return;
 				const author = e.instance.props.userOverride || e.instance.props.message.author;
 				let userType = this.getUserType(author, e.instance.props.message.channel_id);
@@ -302,13 +304,9 @@ module.exports = (_ => {
 							inject = this.settings.tagPlaces.userPopout;
 							tagClass = BDFDB.disCNS.userpopoutheaderbottag + BDFDB.disCN.bottagnametag;
 						}
-						else if (e.instance.props.className.indexOf(BDFDB.disCN.userpopoutusernametagnonickname) > -1) {
-							inject = this.settings.tagPlaces.userPopout;
-							tagClass = BDFDB.disCNS.userpopoutusernamebottag + BDFDB.disCN.bottagnametag;
-						}
 						else if (e.instance.props.className.indexOf(BDFDB.disCN.userprofilenametag) > -1) {
 							inject = this.settings.tagPlaces.userProfile;
-							tagClass = BDFDB.disCNS.userprofilebottag + BDFDB.disCN.bottagnametag;
+							tagClass = BDFDB.disCN.bottagnametag;
 						}
 						if (inject) this.injectStaffTag(e.returnvalue.props.children, e.instance.props.user, userType, 2, {
 							tagClass: tagClass,
@@ -320,22 +318,6 @@ module.exports = (_ => {
 			}
 			
 			processUsernameSection (e) {
-				if (e.instance.props.user && this.settings.tagPlaces.userPopout) {
-					let userType = this.getUserType(e.instance.props.user, e.instance.props.channel && e.instance.props.channel.id);
-					if (userType) {
-						let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {props: [["className", BDFDB.disCN.userpopoutusernamenickname]]});
-						if (index > -1) {
-							if (!BDFDB.ArrayUtils.is(children[index].props.children)) children[index].props.children = [children[index].props.children].flat(10);
-							this.injectStaffTag(children[index].props.children, e.instance.props.user, userType, 2, {
-								tagClass: BDFDB.disCNS.userpopoutheaderbottag + BDFDB.disCN.bottagnametag,
-								inverted: typeof e.instance.getMode == "function" && e.instance.getMode() !== "Normal"
-							});
-						}
-					}
-				}
-			}
-			
-			processUserPopoutInfo (e) {
 				if (e.instance.props.user && this.settings.tagPlaces.userPopout) {
 					let userType = this.getUserType(e.instance.props.user, e.instance.props.channel && e.instance.props.channel.id);
 					if (userType) {
@@ -355,8 +337,8 @@ module.exports = (_ => {
 				if (!BDFDB.ArrayUtils.is(children) || !user) return;
 				let [_, index] = BDFDB.ReactUtils.findParent(children, {props: [["text", [BDFDB.LanguageUtils.LanguageStrings.GROUP_OWNER, BDFDB.LanguageUtils.LanguageStrings.GUILD_OWNER]]]});
 				if (index > -1) children[index] = null;
-				let channel = BDFDB.LibraryModules.ChannelStore.getChannel(config.channelId || BDFDB.LibraryModules.LastChannelStore.getChannelId());
-				let member = channel && this.settings.general.useRoleColor ? (BDFDB.LibraryModules.MemberStore.getMember(channel.guild_id, user.id) || {}) : {};
+				let channel = BDFDB.LibraryStores.ChannelStore.getChannel(config.channelId || BDFDB.LibraryStores.SelectedChannelStore.getChannelId());
+				let member = channel && this.settings.general.useRoleColor ? (BDFDB.LibraryStores.GuildMemberStore.getMember(channel.guild_id, user.id) || {}) : {};
 				
 				let fallbackLabel = this.settings.general.useCrown && this.getLabelFallback(userType);
 				let label = this.getLabel(userType, fallbackLabel);
@@ -427,9 +409,9 @@ module.exports = (_ => {
 			
 			getUserType (user, channelId) {
 				if (!user || this.settings.general.ignoreBots && user.bot || this.settings.general.ignoreMyself && user.id == BDFDB.UserUtils.me.id) return userTypes.NONE;
-				const channel = BDFDB.LibraryModules.ChannelStore.getChannel(channelId || BDFDB.LibraryModules.LastChannelStore.getChannelId());
+				const channel = BDFDB.LibraryStores.ChannelStore.getChannel(channelId || BDFDB.LibraryStores.SelectedChannelStore.getChannelId());
 				if (!channel) return userTypes.NONE;
-				const guild = BDFDB.LibraryModules.GuildStore.getGuild(channel.guild_id);
+				const guild = BDFDB.LibraryStores.GuildStore.getGuild(channel.guild_id);
 				
 				if (this.settings.tagTypes.owners && guild && guild.ownerId == user.id) return userTypes.OWNER;
 				else if (this.settings.tagTypes.groupOwners && channel.ownerId == user.id && channel.isGroupDM()) return userTypes.GROUP_OWNER;
