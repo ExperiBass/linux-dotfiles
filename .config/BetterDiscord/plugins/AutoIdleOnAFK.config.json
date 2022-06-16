@@ -3,5 +3,5 @@
         "version": "0.3.0",
         "hasShownChangelog": true
     },
-    "IdleSetByPlugin": false
+    "IdleSetByPlugin": true
 }
