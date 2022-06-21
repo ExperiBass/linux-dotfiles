@@ -49,6 +49,7 @@
 !/.bin/touchpadctl
 !/.bin/volume-ctl
 !/.bin/powermenu.sh
+!/.bin/restore.sh
 
 # Custom theme
 !/.themes/

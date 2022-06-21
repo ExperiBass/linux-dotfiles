@@ -2,6 +2,5 @@
     "currentVersionInfo": {
         "version": "0.3.0",
         "hasShownChangelog": true
-    },
-    "IdleSetByPlugin": true
+    }
 }

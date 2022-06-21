@@ -18,5 +18,5 @@ backlight=$(xbacklight -get)
 keeb_backlight=$(backlight_get)
 
 xbacklight -set 0 -steps 10 && ~/.bin/keyboard-backlight 0 \
-    && i3lock --tiling -enui ~/.config/i3/custom/wallpaper.png \
+    && i3lock --tiling -eni ~/.config/i3/custom/wallpaper.png \
     && xbacklight -set "$backlight" -steps 10 && ~/.bin/keyboard-backlight "$keeb_backlight"
