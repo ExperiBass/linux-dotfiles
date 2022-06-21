@@ -18,7 +18,7 @@ mv ./tmp/.git ~
 rmdir ./tmp
 git checkout master
 
-# TODO: Figure out how to edit kernel args in /etc/default/grub
+sed -r 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+/& quiet intel_iommu=on iommu=pt pcie_ports=compat/' /etc/default/grub
 
 echo "Restoring files..."
 cp -ruv $backup /
@@ -28,6 +28,7 @@ dd if=/dev/zero of=/swapfile bs=10M count=2000 # 20gb, ram+hibernate
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
+echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 
 echo "Installing packages..."
 yay -S --needed --nocleanmenu --nodiffmenu --noeditmenu --noremovemake \
