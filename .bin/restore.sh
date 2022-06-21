@@ -18,7 +18,7 @@ mv ./tmp/.git ~
 rmdir ./tmp
 git checkout master
 
-sed -r 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+/& quiet intel_iommu=on iommu=pt pcie_ports=compat/' /etc/default/grub
+sed -ri 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+/& quiet intel_iommu=on iommu=pt pcie_ports=compat/' /etc/default/grub
 
 echo "Restoring files..."
 cp -ruv $backup /
