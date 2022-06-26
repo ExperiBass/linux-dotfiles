@@ -3,6 +3,7 @@
 !.zshrc
 !.profile
 !README.MD
+!node_modules
 
 # track config files
 !/.config
@@ -50,6 +51,8 @@
 !/.bin/volume-ctl
 !/.bin/powermenu.sh
 !/.bin/restore.sh
+!/.bin/node-scripts/
+!/.bin/node-scripts/*
 
 # Custom theme
 !/.themes/
