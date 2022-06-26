@@ -53,6 +53,8 @@
 !/.bin/restore.sh
 !/.bin/node-scripts/
 !/.bin/node-scripts/*
+!/.bin/node-scripts/scripts/
+!/.bin/node-scripts/scripts/*
 
 # Custom theme
 !/.themes/
