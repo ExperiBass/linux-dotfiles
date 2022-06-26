@@ -1,8 +1,9 @@
-const mempool = require('@mempool/mempool.js')
+const mempoolJS = require('@mempool/mempool.js')
 const chalk = require('chalk')
 const {get} = require('axios')
+
 const init = async () => {
-    const { bitcoin: { fees, difficulty, blocks } } = mempool({
+    const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
         hostname: 'mempool.space'
     })
 
@@ -13,9 +14,9 @@ const init = async () => {
     // its done this way for ease of reading
     // its probably bad practice but better than one loooooooooong line
     const feeInfo = [
-        `省${chalk.green(recomendedFees.fastestFee)}`,
+        `省 ${chalk.green(recomendedFees.fastestFee)}`,
         `ﰌ ${chalk.green(recomendedFees.halfHourFee)}`,
-        `廒${chalk.green(recomendedFees.hourFee)}`,
+        `廒 ${chalk.green(recomendedFees.hourFee)}`,
         ` ${chalk.green(recomendedFees.economyFee)}`
     ]
 
@@ -34,6 +35,13 @@ const init = async () => {
 
     const currHeight = await blocks.getBlocksTipHeight()
 
+    const currMempool = await mempool.getMempool()
+
+    const mempoolInfo = [
+        `ﬅ ${currMempool.count} ${chalk.gray.underline("TXs")}`,
+        ` ${(currMempool.vsize / 1000000).toFixed(2)} ${chalk.gray.underline("MvB")}`
+    ]
+
     // the rest of this isnt in the mempool module
     const {currentHashrate} = (await get('https://mempool.space/api/v1/mining/hashrate/3d')).data
 
@@ -41,13 +49,12 @@ const init = async () => {
 
     const finalInfo = [
         `${feeInfo.join(` ${x} | `)} ${x}`,
+        `${mempoolInfo.join(" | ")}`,
         `${diffInfo.join(" | ")}`,
         `ﲗ ${currHeight} | ﬙ ${currHashrate} ${x2}`
     ]
 
-    console.log(finalInfo.join(" | "))
+    console.log(`ﴑ | ${finalInfo.join(" | ")}`)
 }
 
-init()/*.catch(e => {
-    // ignore, probably a network error, dont wanna fill up the bar lol
-})*/
+init()
