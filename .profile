@@ -24,7 +24,6 @@ feh --bg-fill ~/.config/i3/custom/wallpaper.png
 
 # fix driver issue
 export LIBVA_DRIVER_NAME=iHD
-sysctl dev.i915.perf_stream_paranoid=0
 
 # fix gnome-keyring
 if [ -n "$DESKTOP_SESSION" ];then

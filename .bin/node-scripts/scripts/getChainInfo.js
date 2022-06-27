@@ -1,6 +1,7 @@
 const mempoolJS = require('@mempool/mempool.js')
 const chalk = require('chalk')
 const {get} = require('axios')
+const Numeral = require("numeral")
 
 const init = async () => {
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
@@ -14,14 +15,14 @@ const init = async () => {
     // its done this way for ease of reading
     // its probably bad practice but better than one loooooooooong line
     const feeInfo = [
-        `省 ${chalk.green(recomendedFees.fastestFee)}`,
-        `ﰌ ${chalk.green(recomendedFees.halfHourFee)}`,
+        ` ${chalk.green(recomendedFees.economyFee)}`,
         `廒 ${chalk.green(recomendedFees.hourFee)}`,
-        ` ${chalk.green(recomendedFees.economyFee)}`
+        `ﰌ ${chalk.green(recomendedFees.halfHourFee)}`,
+        `省 ${chalk.green(recomendedFees.fastestFee)}`
     ]
 
     const diffAdjustInfo = await difficulty.getDifficultyAdjustment()
-    let diffChange = ` ${diffAdjustInfo.difficultyChange.toFixed(2)}`
+    let diffChange = ` ${diffAdjustInfo.difficultyChange.toFixed(2)}%`
     if (diffAdjustInfo.difficultyChange >= 0) {
         diffChange = chalk.green(`${diffAdjustInfo.difficultyChange === 0 ? " " : ""}${diffChange}`)
     } else if (diffAdjustInfo.difficultyChange < 0) {
@@ -30,7 +31,7 @@ const init = async () => {
     const diffInfo = [
         ` ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
         `${diffChange}`,
-        ` ${diffAdjustInfo.remainingBlocks}`
+        ` ${Numeral(diffAdjustInfo.remainingBlocks).format()}`
     ]
 
     const currHeight = await blocks.getBlocksTipHeight()
@@ -38,7 +39,7 @@ const init = async () => {
     const currMempool = await mempool.getMempool()
 
     const mempoolInfo = [
-        `ﬅ ${currMempool.count} ${chalk.gray.underline("TXs")}`,
+        `ﬅ ${Numeral(currMempool.count).format()} ${chalk.gray.underline("TXs")}`,
         ` ${(currMempool.vsize / 1000000).toFixed(2)} ${chalk.gray.underline("MvB")}`
     ]
 
@@ -51,7 +52,7 @@ const init = async () => {
         `${feeInfo.join(` ${x} | `)} ${x}`,
         `${mempoolInfo.join(" | ")}`,
         `${diffInfo.join(" | ")}`,
-        `ﲗ ${currHeight} | ﬙ ${currHashrate} ${x2}`
+        `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${x2}`
     ]
 
     console.log(`ﴑ | ${finalInfo.join(" | ")}`)
