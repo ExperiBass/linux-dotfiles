@@ -23,10 +23,13 @@ const init = async () => {
 
     const diffAdjustInfo = await difficulty.getDifficultyAdjustment()
     let diffChange = ` ${diffAdjustInfo.difficultyChange.toFixed(2)}%`
-    if (diffAdjustInfo.difficultyChange >= 0) {
-        diffChange = chalk.green(`${diffAdjustInfo.difficultyChange === 0 ? " " : ""}${diffChange}`)
+    if (diffAdjustInfo.difficultyChange > 0) {
+        diffChange = chalk.green(`${diffChange}`)
     } else if (diffAdjustInfo.difficultyChange < 0) {
         diffChange = chalk.red(`${diffChange}`)
+    } else {
+        // Mimick mempool.space and display no percentage
+        diffChange = chalk.green(` ————`)
     }
     const diffInfo = [
         ` ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,

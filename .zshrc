@@ -62,7 +62,7 @@ alias getlmms="git clone --recurse-submodules -b master https://github.com/lmms/
 alias buildlmms='cmake .. -DCMAKE_INSTALL_PREFIX=../target/  -Wno-dev -DWANT_CARLA=ON -DWANT_VST=ON -DCMAKE_PREFIX_PATH=/usr/lib/wine && make -j14'
 alias updatelmms="git remote update && git pull && git submodule update --init --recursive"
 alias uablmms="updatelmms && cd ./build && buildlmms"
-alias fullmms="getlmms && buildlmms"
+alias fullmms="getlmms && cd ./build && buildlmms"
 
 # IBus
 export GTK_IM_MODULE=ibus
