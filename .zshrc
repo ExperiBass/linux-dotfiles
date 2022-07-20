@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Compilation flags
-export ARCHFLAGS="-march=native"
+# export ARCHFLAGS="-march=native"
 
 # Config
 
