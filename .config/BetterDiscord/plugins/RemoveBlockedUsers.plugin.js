@@ -2,7 +2,7 @@
  * @name RemoveBlockedUsers
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.5.0
+ * @version 1.5.1
  * @description Removes blocked Messages/Users
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -17,13 +17,8 @@ module.exports = (_ => {
 		"info": {
 			"name": "RemoveBlockedUsers",
 			"author": "DevilBro",
-			"version": "1.5.0",
+			"version": "1.5.1",
 			"description": "Removes blocked Messages/Users"
-		},
-		"changeLog": {
-			"fixed": {
-				"Voice Notifications": "Fixed an Issue where nonblocked Users or yourself would stop making noices on join/leave after some occurences"
-			}
 		}
 	};
 
@@ -81,6 +76,7 @@ module.exports = (_ => {
 						replies:			{value: true, 	description: "Replies"},
 						mentions:			{value: true, 	description: "Mentions"},
 						reactions:			{value: true, 	description: "Reactions"},
+						threads:			{value: true, 	description: "Threads"},
 						autocompletes:		{value: true, 	description: "Autocomplete Entries"},
 						memberList:			{value: true, 	description: "Members in List"},
 						voiceList:			{value: true, 	description: "Members in Voice List"},
@@ -111,6 +107,7 @@ module.exports = (_ => {
 						Messages: "type",
 						SearchResultsInner: "default",
 						Reactions: "render",
+						ActiveThread: "type",
 						ConnectedChannelMembers: "default",
 						MemberListItem: "render",
 						NowPlayingItem: "default",
@@ -369,6 +366,15 @@ module.exports = (_ => {
 				if (this.settings.places.reactions && BDFDB.ArrayUtils.is(e.instance.props.reactors)) e.instance.props.reactors = e.instance.props.reactors.filter(n => !n || !BDFDB.LibraryModules.RelationshipStore.isBlocked(n.id));
 			}
 			
+			processActiveThread (e) {
+				if (!this.settings.places.threads) return;
+				let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {filter: n => n && n.type && n.type.toString().indexOf(".getMostRecentMessage") > -1});
+				if (index > -1 && children[index].props && children[index].props.channel) {
+					let message = BDFDB.LibraryModules.MessageStore.getMessage(children[index].props.channel.id, children[index].props.channel.lastMessageId);
+					if (message && BDFDB.LibraryModules.RelationshipStore.isBlocked(message.author.id)) children[index] = null;
+				}
+			}
+			
 			processConnectedChannelMembers (e) {
 				if (!this.settings.places.memberList) return;
 				let channelMembers = BDFDB.ReactUtils.findChild(e.returnvalue, {name: "ChannelMembers"});
@@ -453,7 +459,11 @@ module.exports = (_ => {
 			processChannelItem (e) {
 				if (this.settings.places.voiceList) {
 					let channelInfo = BDFDB.ReactUtils.findChild(e.instance.props.children, {props: [["className", BDFDB.disCN.channelinfo]]});
-					if (channelInfo && channelInfo.props && channelInfo.props.children && channelInfo.props.children.props && BDFDB.ArrayUtils.is(channelInfo.props.children.props.voiceStates)) channelInfo.props.children.props.voiceStates = [].concat(channelInfo.props.children.props.voiceStates).filter(n => !n.user || !BDFDB.LibraryModules.RelationshipStore.isBlocked(n.user.id));
+					if (channelInfo && channelInfo.props && channelInfo.props.children && channelInfo.props.children.props && BDFDB.ArrayUtils.is(channelInfo.props.children.props.voiceStates)) {
+						let newVoiceStates = [].concat(channelInfo.props.children.props.voiceStates).filter(n => !n.user || !BDFDB.LibraryModules.RelationshipStore.isBlocked(n.user.id));
+						if (channelInfo.props.children.props.channel.userLimit) channelInfo.props.children.props.channel = new BDFDB.DiscordObjects.Channel(Object.assign({}, channelInfo.props.children.props.channel, {userLimit: channelInfo.props.children.props.channel.userLimit - (channelInfo.props.children.props.voiceStates.length - newVoiceStates.length)}));
+						channelInfo.props.children.props.voiceStates = newVoiceStates;
+					}
 				}
 			}
 		

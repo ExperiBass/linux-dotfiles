@@ -8,13 +8,13 @@
 STEP=5       # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
 
 notify() {
-    value=$(xbacklight -get)
+	value=$(xbacklight -get)
     notify-send -t 2000 "Display brightness: ${value}"
 }
 if [[ $1 == [uU][pP] ]] ; then
     xbacklight -inc $STEP -steps $STEP
-    $(notify)
+    notify
 else
     xbacklight -dec $STEP -steps $STEP
-    $(notify)
+    notify
 fi

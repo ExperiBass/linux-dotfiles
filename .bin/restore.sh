@@ -11,17 +11,22 @@ dotfiles="https://github.com/experibass/linux-dotfiles"
 # set default yay options
 yay --batchinstall --sudoloop --cleanafter --save
 
+# Make required dirs
+mkdir -p ~/Builds/kernel
+mkdir -p ~/tmp
+
+# start
 echo "Restoring config..."
-mkdir ~/tmp
+cd ~ || exit 1
 git clone --no-checkout $dotfiles ./tmp
 mv ./tmp/.git ~
 rmdir ./tmp
 git checkout master
 
-sed -ri 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+/& quiet intel_iommu=on iommu=pt pcie_ports=compat/' /etc/default/grub
+sudo sed -ri 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+/& quiet intel_iommu=on iommu=pt pcie_ports=compat/' /etc/default/grub
 
 echo "Restoring files..."
-cp -ruv $backup /
+cp -ruv "$backup" /
 
 echo "Creating swapfile..."
 dd if=/dev/zero of=/swapfile bs=10M count=2000 # 20gb, ram+hibernate
@@ -33,28 +38,26 @@ echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 echo "Installing packages..."
 yay -S --needed --nocleanmenu --nodiffmenu --noeditmenu --noremovemake \
     --noupgrademenu --answerclean=N --answerdiff=N --answerupgrade=Y --noconfirm \
-    - < $pkglist
+    - < "$pkglist"
 
 echo "Installing AUR packages..."
 yay -S --needed --nocleanmenu --nodiffmenu --noeditmenu --noremovemake \
     --noupgrademenu --answerclean=N --answerdiff=N --answerupgrade=Y --noconfirm \
-    - < $aurpkglist
+    - < "$aurpkglist"
 
 echo "Compiling kernel..."
 # https://wiki.t2linux.org/guides/kernel/
 export MAKEFLAGS=-j$(nproc)
-cd ~/Builds
-mkdir -p kernel
-cd kernel
+cd ~/Builds/kernel || exit 1
 git clone --depth=1 https://github.com/Redecorating/mbp-16.1-linux-wifi patches
 source patches/PKGBUILD
-wget https://www.kernel.org/pub/linux/kernel/v${pkgver//.*}.x/linux-${pkgver}.tar.xz
-tar xf $_srcname.tar.xz
-cd $_srcname
+wget https://www.kernel.org/pub/linux/kernel/v"${pkgver//.*}".x/linux-"${pkgver}".tar.xz
+tar xf "$_srcname".tar.xz
+cd "$_srcname" || exit 1
 git clone --depth=1 https://github.com/t2linux/apple-bce-drv drivers/staging/apple-bce
 git clone --depth=1 https://github.com/Redecorating/apple-ib-drv drivers/staging/apple-ibridge # Redecoratings patch works
 for patch in ../patches/*.patch; do
-    patch -Np1 < $patch
+    patch -Np1 < "$patch"
 done
 zcat /proc/config.gz > .config
 make olddefconfig

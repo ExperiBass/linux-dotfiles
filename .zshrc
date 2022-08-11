@@ -45,7 +45,7 @@ alias killall='nocorrect killall'
 alias nf='neofetch'
 alias yiff='nocorrect /usr/bin/yay'
 alias neocities='cd ~/Builds/neocities-ruby/bin && ./neocities && cd "-"'
-alias cp='cp -r'
+alias cp='cp -ruv'
 # I M P O R T S
 #
 # Development

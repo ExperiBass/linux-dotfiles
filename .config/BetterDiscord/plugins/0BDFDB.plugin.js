@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 2.4.6
+ * @version 2.4.9
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -19,7 +19,7 @@ module.exports = (_ => {
 		"info": {
 			"name": "BDFDB",
 			"author": "DevilBro",
-			"version": "2.4.6",
+			"version": "2.4.9",
 			"description": "Required Library for DevilBro's Plugins"
 		},
 		"rawUrl": "https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js"
@@ -8024,6 +8024,7 @@ module.exports = (_ => {
 					muted: true,
 					loop: true,
 					autoPlay: props.play,
+					playOnHover: props.playOnHover,
 					preload: "none"
 				}) : BDFDB.ReactUtils.createElement("img", {
 					alt: "",
@@ -8178,6 +8179,8 @@ module.exports = (_ => {
 			
 			Internal.patchedModules = {
 				before: {
+					UserBanner: "default",
+					UserPopoutAvatar: "UserPopoutAvatar",
 					SearchBar: "render",
 					EmojiPicker: "type",
 					EmojiPickerListRow: "default"
@@ -8214,17 +8217,15 @@ module.exports = (_ => {
 							if (count > 20) return BDFDB.TimeUtils.clear(interval);
 							else {
 								let module = BDFDB.ModuleUtils.findByString("guild-header-popout");
-								if (module) BDFDB.PatchUtils.patch(BDFDB, module.default.prototype, "render", {after: e2 => {
-									BDFDB.PatchUtils.patch(BDFDB, e2.returnValue.type, "type", {after: e3 => {
-										Internal.triggerQueuePatch("GuildHeaderContextMenu", {
-											arguments: e3.methodArguments,
-											instance: {props: e3.methodArguments[0]},
-											returnvalue: e3.returnValue,
-											component: e2.returnValue,
-											methodname: "type",
-											type: "GuildHeaderContextMenu"
-										});
-									}}, {noCache: true});
+								if (module) BDFDB.PatchUtils.patch(BDFDB, module, "type", {after: e2 => {
+									Internal.triggerQueuePatch("GuildHeaderContextMenu", {
+										arguments: e2.methodArguments,
+										instance: {props: e2.methodArguments[0]},
+										returnvalue: e2.returnValue,
+										component: e.returnValue,
+										methodname: "type",
+										type: "GuildHeaderContextMenu"
+									});
 								}});
 							}
 						}, 500);
@@ -8249,6 +8250,13 @@ module.exports = (_ => {
 					return [InternalData.ModuleUtilsConfig.Finder.AppView.strings].flat(10).filter(n => typeof n == "string").every(string => typeString.indexOf(string) > -1);
 				}});
 				if (index > -1) children[index] = BDFDB.ReactUtils.createElement(AppViewExport.exports.default, children[index].props);
+			};
+			
+			Internal.processUserBanner = function (e) {
+				if (e.instance.props.user && e.instance.props.user.id == InternalData.myId) {
+					e.instance.props.user = BDFDB.LibraryModules.UserStore.getUser(e.instance.props.user.id);
+					if (e.instance.props.user.banner) e.instance.props.bannerSrc = e.instance.props.user.banner;
+				}
 			};
 			
 			Internal.processMessage = function (e) {
@@ -8406,8 +8414,16 @@ module.exports = (_ => {
 			};
 			Internal.processUserPopoutAvatar = function (e) {
 				if (!e.instance.props.user) return;
-				let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {props: [["className", BDFDB.disCN.userpopoutavatarwrapper]]});
-				if (index > -1) children[index] = Internal._processAvatarRender(e.instance.props.user, children[index], null, e.instance) || children[index];
+				if (!e.returnvalue) {
+					if (e.instance.props.user && e.instance.props.user.id == InternalData.myId) {
+						e.instance.props.user = BDFDB.LibraryModules.UserStore.getUser(e.instance.props.user.id);
+						if (e.instance.props.displayProfile) e.instance.props.displayProfile.banner = e.instance.props.user.banner;
+					}
+				}
+				else {
+					let [children, index] = BDFDB.ReactUtils.findParent(e.returnvalue, {props: [["className", BDFDB.disCN.userpopoutavatarwrapper]]});
+					if (index > -1) children[index] = Internal._processAvatarRender(e.instance.props.user, children[index], null, e.instance) || children[index];
+				}
 			};
 			Internal.processPeopleListItem = function (e) {
 				if (e.instance.props.user) e.node.setAttribute(InternalData.userIdAttribute, e.instance.props.user.id);
@@ -8820,10 +8836,6 @@ module.exports = (_ => {
 
 			BDFDB.PatchUtils.patch(BDFDB, Internal.LibraryModules.IconUtils, "getUserBannerURL", {instead: e => {
 				return e.methodArguments[0].id == InternalData.myId ? e.methodArguments[0].banner : e.callOriginalMethod();
-			}});
-			
-			BDFDB.PatchUtils.patch(BDFDB, Internal.LibraryModules.BannerUtils, "getUserBannerURLForContext", {instead: e => {
-				return e.methodArguments[0].user && e.methodArguments[0].user.id == InternalData.myId ? e.methodArguments[0].user.banner : e.callOriginalMethod();
 			}});
 			
 			BDFDB.PatchUtils.patch(BDFDB, Internal.LibraryModules.EmojiStateUtils, "getEmojiUnavailableReason", {after: e => {
