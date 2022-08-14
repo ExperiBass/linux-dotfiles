@@ -1,11 +1,19 @@
 const mempoolJS = require('@mempool/mempool.js')
 const chalk = require('chalk')
-const {get} = require('axios')
+const {get, default: axios} = require('axios')
 const Numeral = require("numeral")
 
 const init = async () => {
+    // try to use self-hosted node over mempool.space
+    let server = 'mempool.space'
+    try {
+        await axios.get("http://solin.neo.rr.com")
+        server = 'solin.neo.rr.com'
+    } catch (e) {
+        // ignore, cant connect
+    }
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
-        hostname: 'mempool.space'
+        hostname: server
     })
 
     const recomendedFees = await fees.getFeesRecommended()
