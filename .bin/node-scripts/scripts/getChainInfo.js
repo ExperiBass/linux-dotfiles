@@ -36,8 +36,8 @@ const init = async () => {
     } else if (diffAdjustInfo.difficultyChange < 0) {
         diffChange = chalk.red(`${diffChange}`)
     } else {
-        // Mimick mempool.space and display no percentage
-        diffChange = chalk.green(` ————`)
+        // Mimick mempool.space and display no percentage 
+        diffChange = chalk.green(` —.——`)
     }
     const diffInfo = [
         ` ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
@@ -66,7 +66,7 @@ const init = async () => {
         `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${x2}`
     ]
 
-    console.log(`ﴑ | ${finalInfo.join(" | ")}`)
+    console.log(`${finalInfo.join(" | ")}`)
 }
 
 init()
