@@ -20,6 +20,8 @@
 !/.config/picom/*
 !/.config/neofetch/
 !/.config/neofetch/*
+!/.config/neofetch/neofetch-themes/
+!/.config/neofetch/neofetch-themes/*
 !/.config/dunst/
 !/.config/dunst/*
 !/.config/kitty/
