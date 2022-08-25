@@ -4,16 +4,7 @@
  * Modified by: experibassmusic
  *******************************************************/
 
-configuration {
-    font:                           "Superphonix2 20";
-    show-icons:                     true;
-    icon-theme: 		    "Arc-X-D";
-    scroll-method:                  0;
-    disable-history:                false;
-    sidebar-mode: 		    false;
-}
-
-@import "~/.config/rofi/wipeout.rasi"
+@import "~/.config/rofi/config.rasi"
 
 window {
     background-color:               @background;
@@ -24,7 +15,6 @@ window {
     location:                       southeast;
     y-offset:                       -800px;
     x-offset:	                    -1025px;
-    transparency:                   "real";
 }
 listview {
     lines:                          5;

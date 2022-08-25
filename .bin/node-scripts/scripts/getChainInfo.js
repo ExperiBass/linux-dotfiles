@@ -6,11 +6,13 @@ const Numeral = require("numeral")
 const init = async () => {
     // try to use self-hosted node over mempool.space
     let server = 'mempool.space'
+    let flag = ''
     try {
-        await axios.get("http://solin.neo.rr.com")
-        server = 'solin.neo.rr.com'
+        await axios.get("solin.thetia:4998")
+        server = 'solin.thetia:4998'
+        flag = '﨩 '
     } catch (e) {
-        // ignore, cant connect
+	    // ignore, cant connect
     }
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
         hostname: server
@@ -66,7 +68,7 @@ const init = async () => {
         `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${x2}`
     ]
 
-    console.log(`${finalInfo.join(" | ")}`)
+    console.log(`${flag}${finalInfo.join(" | ")}`)
 }
 
 init()

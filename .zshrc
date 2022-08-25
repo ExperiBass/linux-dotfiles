@@ -32,7 +32,8 @@ source $ZSH/oh-my-zsh.sh
 # Config
 
 export GPG_TTY=$(tty)
-
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 alias vis='nocorrect vis'
 alias reload='source ~/.zshrc && echo -e "\\e[4;32mReloaded!\\e[0m"'
 alias tldr='nocorrect tldr'
