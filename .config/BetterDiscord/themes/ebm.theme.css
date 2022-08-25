@@ -14,8 +14,8 @@
 :root {
   --main-color: #076b81;
   --hover-color: var(--main-color); /*#ae7b0b*/
-  --success-color: #43b581;
-  --danger-color: #982929;
+  --success-color:   #41B07E;
+  --danger-color: #c90e0e;
   --url-color: #f0ad19;
   --text-color: #5fdbf6;
   --background-image: transparent;
@@ -59,11 +59,11 @@
   --channel-unread: var(--main-color);
   --channel-color: var(--main-color);
   --muted-color: rgba(255,255,255,0.1);
-  --online-color: #43b581;
+  --online-color: var(--success-color);
   --idle-color: #faa61a;
-  --dnd-color: #982929;
+  --dnd-color: #bd2121;
   --streaming-color: #593695;
-  --offline-color: #808080;
+  --offline-color: #555555;
   --main-font: "FiraCode Nerd Font";
   --code-font: var(--main-font);
   --channels-width: 220px;
@@ -91,8 +91,8 @@
   --rs-medium-width: 2px;
   --rs-large-width: 2px;
   --rs-avatar-shape: 50%;
-  --rs-online-color: #43b581;
-  --rs-idle-color: #faa61a;
+  --rs-online-color:  #00FF8C;
+  --rs-idle-color:  #FFA200;
   --rs-dnd-color: #f04747;
   --rs-offline-color: #636b75;
   --rs-streaming-color: #643da7;
