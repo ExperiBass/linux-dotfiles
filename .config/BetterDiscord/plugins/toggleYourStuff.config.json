@@ -1,7 +1,28 @@
 {
     "settings": {
         "plugins": {
+            "ActivityIcons": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterAudioPlayer": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
             "BetterBotTags": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterChatNames": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,
@@ -36,14 +57,7 @@
                 "alt": true,
                 "keycode": 82
             },
-            "CopyRawMessage": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "DashToSpaceInChannelName": {
+            "RemoveBlockedUsers": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,
