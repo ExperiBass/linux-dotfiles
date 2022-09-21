@@ -3,6 +3,7 @@
 		"customTitles": {
 			"owner": "",
 			"groupOwner": "",
+			"forumCreator": "",
 			"threadCreator": "",
 			"admin": "",
 			"management": ""
@@ -32,6 +33,7 @@
 			"owners": true,
 			"groupOwners": true,
 			"threadCreators": true,
+			"forumCreators": true,
 			"admins": true,
 			"managementG": true,
 			"managementC": true,
