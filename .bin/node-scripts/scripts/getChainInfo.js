@@ -8,7 +8,7 @@ const init = async () => {
     let server = 'mempool.space'
     let flag = ''
     try {
-        await axios.get("localhost:4998")
+        const res = await axios.get("localhost:4998")
         server = 'localhost:4998'
         flag = '﨩 '
     } catch (e) {
