@@ -3,27 +3,15 @@ const chalk = require('chalk')
 const { get } = require('axios')
 const Numeral = require("numeral")
 
-const init = async () => {
-    // try to use self-hosted node over mempool.space
-    let server = 'mempool.space'
-    let flag = ''
-    /*try {
-        const res = await axios.get("localhost:4998")
-        server = 'localhost:4998'
-        flag = '﨩 '
-    } catch (e) {
-        // ignore, cant connect
-    }*/
+const main = async () => {
+    const satvb = chalk.gray.underline("sat/vB")
+    const ehs = chalk.gray.underline("EH/s")
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
-        hostname: server
+        hostname: 'mempool.space'
     })
 
     const recomendedFees = await fees.getFeesRecommended()
-    const x = chalk.gray.underline("sat/vB")
-    const x2 = chalk.gray.underline("EH/s")
 
-    // its done this way for ease of reading
-    // its probably bad practice but better than one loooooooooong line
     const feeInfo = [
         ` ${chalk.green(recomendedFees.economyFee)}`,
         `廒 ${chalk.green(recomendedFees.hourFee)}`,
@@ -62,13 +50,14 @@ const init = async () => {
     const currHashrate = (currentHashrate / Number(1000000000000000000n)).toFixed(2) // EH/s
 
     const finalInfo = [
-        `${feeInfo.join(` ${x} | `)} ${x}`,
+        `${feeInfo.join(` ${satvb} | `)} ${satvb}`,
         `${mempoolInfo.join(" | ")}`,
         `${diffInfo.join(" | ")}`,
-        `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${x2}`
+        `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${ehs}`
     ]
 
-    console.log(`${flag}${finalInfo.join(" | ")}`)
+    return `${finalInfo.join(" | ")}`
+    // array.join is my favorite function
 }
 
-init().catch(e => console.log(`Failed to fetch info.\n${e}`))
+main().then(console.log).catch(e => console.log(`Failed to fetch info.\n${e}`))
