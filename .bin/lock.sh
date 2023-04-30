@@ -6,7 +6,7 @@
 ##############################################
 
 # get needed devices
-KEYBOARD=apple::kbd_backlight
+KEYBOARD=:white:kbd_backlight
 
 # define functions
 backlight_get() {
@@ -16,7 +16,10 @@ backlight_get() {
 # get current values
 backlight=$(xbacklight -get)
 keeb_backlight=$(backlight_get)
-
-xbacklight -set 0 -steps 10 && ~/.bin/keyboard-backlight 0 \
-    && i3lock --tiling -eni ~/.config/i3/custom/wallpaper.png \
-    && xbacklight -set "$backlight" -steps 10 && ~/.bin/keyboard-backlight "$keeb_backlight"
+background=~/.config/i3/custom/lock.png
+#magick ~/.config/i3/custom/wallpaper "$background"
+xbacklight -set 0 -steps 10 && ~/.bin/keyboard-backlight 0 &&
+    dunstctl set-paused "true" &&
+    i3lock --tiling -eni "$background" &&
+    dunstctl set-paused "false" &&
+    xbacklight -set "$backlight" -steps 10 && ~/.bin/keyboard-backlight "$keeb_backlight"

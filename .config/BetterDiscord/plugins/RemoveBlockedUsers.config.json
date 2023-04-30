@@ -4,6 +4,10 @@
 			"messages": true,
 			"voiceChat": true
 		},
+		"notifications": {
+			"messages": true,
+			"voiceChat": true
+		},
 		"places": {
 			"messages": true,
 			"pins": true,
@@ -14,7 +18,7 @@
 			"threads": true,
 			"autocompletes": true,
 			"memberList": true,
-			"voiceList": false,
+			"voiceList": true,
 			"voiceChat": false,
 			"activity": true,
 			"channelList": true,

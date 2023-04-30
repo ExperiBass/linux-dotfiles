@@ -1,19 +1,19 @@
 const mempoolJS = require('@mempool/mempool.js')
 const chalk = require('chalk')
-const {get, default: axios} = require('axios')
+const { get } = require('axios')
 const Numeral = require("numeral")
 
 const init = async () => {
     // try to use self-hosted node over mempool.space
     let server = 'mempool.space'
     let flag = ''
-    try {
+    /*try {
         const res = await axios.get("localhost:4998")
         server = 'localhost:4998'
         flag = '﨩 '
     } catch (e) {
-	    // ignore, cant connect
-    }
+        // ignore, cant connect
+    }*/
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
         hostname: server
     })
@@ -57,7 +57,7 @@ const init = async () => {
     ]
 
     // the rest of this isnt in the mempool module
-    const {currentHashrate} = (await get('https://mempool.space/api/v1/mining/hashrate/3d')).data
+    const { currentHashrate } = (await get('https://mempool.space/api/v1/mining/hashrate/3d')).data
 
     const currHashrate = (currentHashrate / Number(1000000000000000000n)).toFixed(2) // EH/s
 
@@ -71,4 +71,4 @@ const init = async () => {
     console.log(`${flag}${finalInfo.join(" | ")}`)
 }
 
-init()
+init().catch(e => console.log(`Failed to fetch info.\n${e}`))

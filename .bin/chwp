@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NEW_PAPER=$1
-PAPER=~/.config/i3/custom/wallpaper.png
+PAPER=~/.config/i3/custom/wallpaper
 
 rm $PAPER
 magick "$NEW_PAPER" -resize 2560x1600! $PAPER

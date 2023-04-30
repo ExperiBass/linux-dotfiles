@@ -1,9 +1,8 @@
-@import "~/.config/rofi/wipeout.rasi"
+@import "~/.config/rofi/forestfall.rasi"
 
 configuration {
     font:                           "FiraCode Nerd Font 20";
     show-icons:                     true;
-    icon-theme: 		   "wipeout-pure-hacker-clone";
     disable-history:                true;
     sidebar-mode: 		   false;
 }
