@@ -41,5 +41,6 @@
     "membersListButtonActive": "true",
     "userAreaButtonActive": "true",
     "messageBarButtonsMinWidth": "40",
-    "buttonCollapseFudgeFactor": "10"
+    "buttonCollapseFudgeFactor": "10",
+    "callContainerButtonActive": "true"
 }

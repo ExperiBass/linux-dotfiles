@@ -1,84 +1,7 @@
 {
     "settings": {
         "plugins": {
-            "ActivityIcons": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterAudioPlayer": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterBotTags": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterChatNames": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterCodeblocks": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterPictureInPicture": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "BetterRoleColors": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "CharCounter": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "RemoveBlockedUsers": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "RemoveChatButtons": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "ServerCount": {
-                "hotkey": "KeyR",
-                "ctrl": true,
-                "shift": false,
-                "alt": true,
-                "keycode": 82
-            },
-            "StaffTag": {
+            "VoiceUsersCounter": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,
@@ -92,7 +15,91 @@
                 "alt": true,
                 "keycode": 82
             },
-            "VoiceUsersCounter": {
+            "StaffTag": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "ServerCount": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "RemoveChatButtons": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "RemoveBlockedUsers": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "CollapsibleUI": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "CharCounter": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterSyntax": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterRoleColors": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterPictureInPicture": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterGuildTooltip": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterChatNames": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "BetterBotTags": {
+                "hotkey": "KeyR",
+                "ctrl": true,
+                "shift": false,
+                "alt": true,
+                "keycode": 82
+            },
+            "ActivityIcons": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,
@@ -101,7 +108,7 @@
             }
         },
         "themes": {
-            "sathum": {
+            "forestfall": {
                 "hotkey": "KeyR",
                 "ctrl": true,
                 "shift": false,

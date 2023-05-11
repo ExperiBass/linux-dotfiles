@@ -24,4 +24,4 @@ sensors | grep -E "fan" | tr "\n" " " | awk 'function round(x,   ival, aval, fra
          return ival
    }
 }
-{printf " %.0f", round( ( ($2 + $13) / 2) * 0.1) * 10}'
+{printf "󰈐 %.0f", round( ( ($2 + $13) / 2) * 0.1) * 10}'
