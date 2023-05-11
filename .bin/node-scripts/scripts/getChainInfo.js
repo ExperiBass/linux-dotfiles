@@ -5,7 +5,7 @@ const Numeral = require("numeral")
 
 const main = async () => {
     const satvb = chalk.gray.underline("sat/vB")
-    const ehs = chalk.gray.underline("EH/s")
+
     const { bitcoin: { fees, difficulty, blocks, mempool } } = mempoolJS({
         hostname: 'mempool.space'
     })
@@ -13,26 +13,27 @@ const main = async () => {
     const recomendedFees = await fees.getFeesRecommended()
 
     const feeInfo = [
-        ` ${chalk.green(recomendedFees.economyFee)}`,
-        `廒 ${chalk.green(recomendedFees.hourFee)}`,
-        `ﰌ ${chalk.green(recomendedFees.halfHourFee)}`,
-        `省 ${chalk.green(recomendedFees.fastestFee)}`
+        `󰁬 ${chalk.green(recomendedFees.economyFee)}`,
+        `󰖃 ${chalk.green(recomendedFees.hourFee)}`,
+        `󰜎 ${chalk.green(recomendedFees.halfHourFee)}`,
+        `󰑮 ${chalk.green(recomendedFees.fastestFee)}`
     ]
 
     const diffAdjustInfo = await difficulty.getDifficultyAdjustment()
     let diffChange = ` ${diffAdjustInfo.difficultyChange.toFixed(2)}%`
     if (diffAdjustInfo.difficultyChange > 0) {
-        diffChange = chalk.green(`${diffChange}`)
+        diffChange = chalk.green(`󰁡${diffChange}`)
     } else if (diffAdjustInfo.difficultyChange < 0) {
-        diffChange = chalk.red(`${diffChange}`)
+        diffChange = chalk.red(`󰁉${diffChange}`)
     } else {
-        // Mimick mempool.space and display no percentage 
-        diffChange = chalk.green(` —.——`)
+        // Mimick mempool.space and display no percentage
+        diffChange = chalk.green(`󰋙 —.——`)
     }
+    // todo: figure out how to display the progress in the icon as well
     const diffInfo = [
-        ` ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
+        `󰫆 ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
         `${diffChange}`,
-        ` ${Numeral(diffAdjustInfo.remainingBlocks).format()}`
+        ` ${Numeral(diffAdjustInfo.remainingBlocks).format()}`
     ]
 
     const currHeight = await blocks.getBlocksTipHeight()
@@ -40,8 +41,8 @@ const main = async () => {
     const currMempool = await mempool.getMempool()
 
     const mempoolInfo = [
-        `ﬅ ${Numeral(currMempool.count).format()} ${chalk.gray.underline("TXs")}`,
-        ` ${(currMempool.vsize / 1000000).toFixed(2)} ${chalk.gray.underline("MvB")}`
+        `󰘆 ${Numeral(currMempool.count).format()} ${chalk.gray.underline("TXs")}`,
+        ` ${(currMempool.vsize / 1000000).toFixed(2)} ${chalk.gray.underline("MvB")}`
     ]
 
     // the rest of this isnt in the mempool module
@@ -53,7 +54,7 @@ const main = async () => {
         `${feeInfo.join(` ${satvb} | `)} ${satvb}`,
         `${mempoolInfo.join(" | ")}`,
         `${diffInfo.join(" | ")}`,
-        `ﲗ ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${ehs}`
+        ` ${Numeral(currHeight).format()} | ﬙ ${currHashrate} ${chalk.gray.underline("EH/s")}`
     ]
 
     return `${finalInfo.join(" | ")}`
