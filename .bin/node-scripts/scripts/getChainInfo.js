@@ -3,6 +3,9 @@ const chalk = require('chalk')
 const { get } = require('axios')
 const Numeral = require("numeral")
 
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max)
+}
 const main = async () => {
     const satvb = chalk.gray.underline("sat/vB")
 
@@ -29,9 +32,13 @@ const main = async () => {
         // Mimick mempool.space and display no percentage
         diffChange = chalk.green(`󰋙 —.——`)
     }
-    // todo: figure out how to display the progress in the icon as well
+
+    const PROGRESS_ICONS = ['󰋙', '󰫃', '󰫄', '󰫅', '󰫆', '󰫇', '󰫈']
+    const segmentSize = 100 / PROGRESS_ICONS.length
+    const index = Math.floor(diffAdjustInfo.progressPercent.toFixed(2) / segmentSize)
+    const icon = PROGRESS_ICONS[clamp(index, 0, PROGRESS_ICONS.length)]
     const diffInfo = [
-        `󰫆 ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
+        `${icon} ${chalk.yellow(diffAdjustInfo.progressPercent.toFixed(2) + "%")}`,
         `${diffChange}`,
         ` ${Numeral(diffAdjustInfo.remainingBlocks).format()}`
     ]
