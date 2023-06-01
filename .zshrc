@@ -3,8 +3,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
 # Add on local paths
 export PSPDEV=/usr/local/pspdev
 export PATH=$PATH:$HOME/.bin:$HOME/.npm-global/bin:$HOME/.deno/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PSPDEV/bin:$HOME/go/bin
-export ZSH="/home/ging/.oh-my-zsh"
-export PNPM_HOME="/home/ging/.local/share/pnpm"
+export ZSH="$HOME/.oh-my-zsh"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # OMZ Config
@@ -36,7 +36,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ## aliases
-alias fl='env WINEPREFIX="$HOME/.local/share/wineprefixes/fl-stuwudio" wine64 $HOME/.local/share/wineprefixes/fl-stuwudio/Program\ Files/Image-Line/Fl\ Studio\ 20/FL64\ \(scaled\).exe'
+alias fl='env WINEPREFIX=/home/ging/.local/share/wineprefixes/fl-stuwudio wine64 $HOME/Desktop/FL\ Studio\ 20.lnk'
 alias vis='nocorrect vis'
 alias reload='source ~/.zshrc && echo -e "\\e[4;32mReloaded!\\e[0m"'
 alias tldr='nocorrect tldr'

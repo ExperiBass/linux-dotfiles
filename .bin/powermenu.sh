@@ -10,7 +10,7 @@ reboot=" Reboot"
 selected_option=$(echo "$lock
 $logout
 $reboot
-$shutdown" | wofi -dmenu\
+$shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
                   -config "~/.config/rofi/powermenu.rasi"\
