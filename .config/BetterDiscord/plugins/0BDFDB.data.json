@@ -2,6 +2,7 @@
 	"PluginNameMap": {},
 	"PluginUrlMap": {
 		"BDFDB": "https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js",
+		"CopyRawMessage": "https://mwittrien.github.io/BetterDiscordAddons/_DEAD/CopyRawMessage.plugin.js",
 		"CreationDate": "https://mwittrien.github.io/BetterDiscordAddons/_DEAD/CreationDate.plugin.js",
 		"ForceImagePreviews": "https://mwittrien.github.io/BetterDiscordAddons/_DEAD/ForceImagePreviews.plugin.js",
 		"JoinedAtDate": "https://mwittrien.github.io/BetterDiscordAddons/_DEAD/JoinedAtDate.plugin.js",
@@ -241,7 +242,6 @@
 			"createSoundpackSound": [");return"],
 			"playSound": ["getSoundpack"]
 		}},
-		"SortedGuildUtils": {"props": ["getSortedGuilds", "getFlattenedGuildIds"]},
 		"SpotifyUtils": {"strings": ["\"SPOTIFY_SET_ACTIVE_DEVICE\"", "deviceId", "accountId"], "exported": false, "value": "exports", "map": {
 			"getAccessToken": ["SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE", "CONNECTION_ACCESS_TOKEN"],
 			"pause": ["SPOTIFY_PLAYER_PAUSE"],

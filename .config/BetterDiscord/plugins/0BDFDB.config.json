@@ -1,9 +1,9 @@
 {
 	"all": {
 		"changeLogs": {
-			"BDFDB": "3.2.8",
+			"BDFDB": "3.2.9",
 			"CharCounter": "1.6.2",
-			"CopyRawMessage": "1.1.5",
+			"CopyRawMessage": "9.9.9",
 			"PluginRepo": "2.5.1",
 			"RemoveBlockedUsers": "1.6.4",
 			"SplitLargeMessages": "1.7.2",
@@ -20,7 +20,7 @@
 			"shareData": true
 		},
 		"hashes": {
-			"0BDFDB.data.json": "199d09bbdbc4599ad35d1581a2b19b558e3f765a",
+			"0BDFDB.data.json": "e5f9681284a5f3cc4425676c8b6487b38aa8a335",
 			"0BDFDB.raw.css": "8957cfbb3672006e0b2371b1d8afde7319a3dffe"
 		}
 	}

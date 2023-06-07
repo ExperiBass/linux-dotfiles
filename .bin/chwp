@@ -5,4 +5,4 @@ PAPER=~/.config/i3/custom/wallpaper
 
 rm $PAPER
 magick "$NEW_PAPER" -resize 2560x1600! $PAPER
-feh --bg-scale $PAPER
+feh --no-fehbg --bg-scale $PAPER
