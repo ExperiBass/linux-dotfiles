@@ -1,14 +1,14 @@
 /**
  * @name Double Click To Edit
  * @author Farcrada, original idea by Jiiks
- * @version 9.4.5
+ * @version 9.4.6
  * @description Double click a message you wrote to quickly edit it.
  * 
  * @invite qH6UWCwfTu
  * @website https://github.com/Farcrada/DiscordPlugins/
  * @source https://github.com/Farcrada/DiscordPlugins/blob/master/Double-click-to-edit/DoubleClickToEdit.plugin.js
  * @updateUrl https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js
-*/
+ */
 
 /** @type {typeof import("react")} */
 const React = BdApi.React,
@@ -20,7 +20,7 @@ const React = BdApi.React,
 			name: "Double Click To Edit",
 			id: "DoubleClickToEdit",
 			description: "Double click a message you wrote to quickly edit it",
-			version: "9.4.5",
+			version: "9.4.6",
 			author: "Farcrada",
 			updateUrl: "https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Double-click-to-edit/DoubleClickToEdit.plugin.js"
 		}
@@ -53,9 +53,6 @@ module.exports = class DoubleClickToEdit {
 			//Copy to clipboard
 			this.copyToClipboard = Webpack.getModule(Filters.byProps("clipboard", "app")).clipboard.copy;
 
-			//Copy to clipboard
-			this.copyToClipboard = BdApi.findModuleByProps("clipboard").clipboard.copy;
-
 			//Reply functions
 			this.replyToMessage = Webpack.getModule(m => m?.toString?.()?.replace('\n', '')?.search(/(channel:[\w|\w],message:[\w|\w],shouldMention:!)/) > -1, { searchExports: true })
 			this.getChannel = Webpack.getModule(Filters.byProps("getChannel", "getDMFromUserId")).getChannel;
@@ -65,12 +62,7 @@ module.exports = class DoubleClickToEdit {
 			this.CurrentUserStore = Webpack.getModule(Filters.byProps("getCurrentUser"));
 
 			//Settings
-			const filter = Webpack.Filters.byStrings(`["tag","children","className","faded","disabled","required","error"]`),
-				target = Webpack.getModule(m => Object.values(m).some(filter));
-			this.FormTitle = target[Object.keys(target).find(k => filter(target[k]))];
-			this.RadioItem = Webpack.getModule(m => m?.Sizes?.NONE, { searchExports: true });
-			this.SwitchItem = Webpack.getModule(Filters.byStrings("=e.note", "checked:"), { searchExports: true });
-
+			this.UIModule = Webpack.getModule(m => m.FormItem && m.RadioGroup);
 
 			//Events
 			global.document.addEventListener('dblclick', this.doubleclickFunc);
@@ -120,10 +112,10 @@ module.exports = class DoubleClickToEdit {
 				//Copy
 				[copy, setCopy] = React.useState(this.doubleClickToCopy),
 				[copyModifier, setCopyModifier] = React.useState(this.copyModifier);
-
+			
 			return [
 				//Edit
-				React.createElement(this.SwitchItem, {
+				React.createElement(this.UIModule.FormSwitch, {
 					//The state that is loaded with the default value
 					value: editEnableModifier,
 					note: "Enable modifier for double clicking to edit",
@@ -136,27 +128,27 @@ module.exports = class DoubleClickToEdit {
 					}
 					//Discord Is One Of Those
 				}, "Enable Edit Modifier"),
-				React.createElement(this.FormTitle, {
+				React.createElement(this.UIModule.FormItem, {
 					disabled: !editEnableModifier,
-					tag: "h3"
-				}, "Modifer to hold to edit a message"),
-				React.createElement(this.RadioItem, {
-					disabled: !editEnableModifier,
-					value: editModifier,
-					options: [
-						{ name: "Shift", value: "shift" },
-						{ name: "Ctrl", value: "ctrl" },
-						{ name: "Alt", value: "alt" }
-					],
-					onChange: (newState) => {
-						this.editModifier = newState.value;
-						Data.save(config.info.id, "editModifier", newState.value);
-						setEditModifier(newState.value);
-					}
-				}),
+					title: "Modifer to hold to edit a message"
+				},
+					React.createElement(this.UIModule.RadioGroup, {
+						disabled: !editEnableModifier,
+						value: editModifier,
+						options: [
+							{ name: "Shift", value: "shift" },
+							{ name: "Ctrl", value: "ctrl" },
+							{ name: "Alt", value: "alt" }
+						],
+						onChange: (newState) => {
+							this.editModifier = newState.value;
+							Data.save(config.info.id, "editModifier", newState.value);
+							setEditModifier(newState.value);
+						}
+					})),
 
 				//Reply
-				React.createElement(this.SwitchItem, {
+				React.createElement(this.UIModule.FormSwitch, {
 					value: reply,
 					note: "Double click another's message and start replying.",
 					onChange: (newState) => {
@@ -165,7 +157,7 @@ module.exports = class DoubleClickToEdit {
 						setReply(newState);
 					}
 				}, "Enable Replying"),
-				React.createElement(this.SwitchItem, {
+				React.createElement(this.UIModule.FormSwitch, {
 					disabled: !reply,
 					value: replyEnableModifier,
 					note: "Enable modifier for double clicking to reply",
@@ -175,27 +167,27 @@ module.exports = class DoubleClickToEdit {
 						setReplyEnableModifier(newState);
 					}
 				}, "Enable Reply Modifier"),
-				React.createElement(this.FormTitle, {
+				React.createElement(this.UIModule.FormItem, {
 					disabled: (!reply || !replyEnableModifier),
-					tag: "h3"
-				}, "Modifier to hold when replying to a message"),
-				React.createElement(this.RadioItem, {
-					disabled: (!reply || !replyEnableModifier),
-					value: replyModifier,
-					options: [
-						{ name: "Shift", value: "shift" },
-						{ name: "Ctrl", value: "ctrl" },
-						{ name: "Alt", value: "alt" }
-					],
-					onChange: (newState) => {
-						this.replyModifier = newState.value;
-						Data.save(config.info.id, "replyModifier", newState.value);
-						setReplyModifier(newState.value);
-					}
-				}),
+					title: "Modifier to hold when replying to a message"
+				},
+					React.createElement(this.UIModule.RadioGroup, {
+						disabled: (!reply || !replyEnableModifier),
+						value: replyModifier,
+						options: [
+							{ name: "Shift", value: "shift" },
+							{ name: "Ctrl", value: "ctrl" },
+							{ name: "Alt", value: "alt" }
+						],
+						onChange: (newState) => {
+							this.replyModifier = newState.value;
+							Data.save(config.info.id, "replyModifier", newState.value);
+							setReplyModifier(newState.value);
+						}
+					})),
 
 				//Copy
-				React.createElement(this.SwitchItem, {
+				React.createElement(this.UIModule.FormSwitch, {
 					value: copy,
 					note: "Copy selection before entering edit-mode.",
 					onChange: (newState) => {
@@ -204,24 +196,24 @@ module.exports = class DoubleClickToEdit {
 						setCopy(newState);
 					}
 				}, "Enable Copying"),
-				React.createElement(this.FormTitle, {
+				React.createElement(this.UIModule.FormItem, {
 					disabled: !copy,
-					tag: "h3"
-				}, "Modifier to hold before copying text"),
-				React.createElement(this.RadioItem, {
-					disabled: !copy,
-					value: copyModifier,
-					options: [
-						{ name: "Shift", value: "shift" },
-						{ name: "Ctrl", value: "ctrl" },
-						{ name: "Alt", value: "alt" }
-					],
-					onChange: (newState) => {
-						this.copyModifier = newState.value;
-						Data.save(config.info.id, "copyModifier", newState.value);
-						setCopyModifier(newState.value);
-					}
-				})
+					title: "Modifier to hold before copying text"
+				},
+					React.createElement(this.UIModule.RadioGroup, {
+						disabled: !copy,
+						value: copyModifier,
+						options: [
+							{ name: "Shift", value: "shift" },
+							{ name: "Ctrl", value: "ctrl" },
+							{ name: "Alt", value: "alt" }
+						],
+						onChange: (newState) => {
+							this.copyModifier = newState.value;
+							Data.save(config.info.id, "copyModifier", newState.value);
+							setCopyModifier(newState.value);
+						}
+					}))
 			];
 		}
 	}

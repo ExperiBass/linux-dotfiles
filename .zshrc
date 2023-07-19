@@ -5,7 +5,7 @@ export BASEPATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
 
 # Add on local paths
 export NPMPATH="$PNPM_HOME:$HOME/.npm-global/bin"
-export MISCPATH="$HOME/.deno/bin:$HOME/.cargo/bin:$PSPDEV/bin:$HOME/go/bin"
+export MISCPATH="$HOME/.deno/bin:$HOME/.cargo/bin:$PSPDEV/bin:$XDG_DATA_HOME/go/bin"
 export LOCALPATH="$HOME/.bin:$HOME/.local/bin"
 export PATH="$LOCALPATH:$MISCPATH:$NPMPATH:$BASEPATH"
 
