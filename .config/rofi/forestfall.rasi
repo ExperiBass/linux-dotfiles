@@ -1,18 +1,8 @@
 * {
-    /* Set colors */
-    bg-color: #271424;
-    primary-color: #DBB28D;
-    secondary-color: #5F547B;
-
-    /* Actual theme */
-    background-color:            @bg-color;
-    background:                  @bg-color;
-    alternate-normal-background: @bg-color;
-    selected-normal-background:  @secondary-color;
-
-    foreground:                  @primary-color;
-    selected-normal-foreground:  @foreground;
-    lightfg:                     @foreground;
-    spacing:                     2;
-    separatorcolor:              @selected-normal-background;
+    background:		#271424;
+    background-alt:	@background;
+    foreground:		#AC7D69;
+    selected:		#DBB28D;
+    active:		#7477A4;
+    urgent:		#AFBBD9;
 }

@@ -28,13 +28,13 @@
 !/.config/vis/*
 !/.config/rofi/
 !/.config/rofi/*
-!/.config/xborders/
-!/.config/xborders/*
+!/.config/betterlockscreen/
+!/.config/betterlockscreen/*
 
 # BetterDiscord
-!/.config/BetterDiscord/
-!/.config/BetterDiscord/plugins/
-!/.config/BetterDiscord/plugins/*
+#!/.config/BetterDiscord/
+#!/.config/BetterDiscord/plugins/
+#!/.config/BetterDiscord/plugins/*
 !/.config/BetterDiscord/themes/
 !/.config/BetterDiscord/themes/*
 
@@ -44,6 +44,8 @@
 
 # Scripts
 !/.bin/
+!/.bin/bdprochot_off.sh
+!/.bin/buildkernel.sh
 !/.bin/bright
 !/.bin/chwp
 !/.bin/fanspeed.sh

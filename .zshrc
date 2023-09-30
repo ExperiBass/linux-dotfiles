@@ -74,3 +74,11 @@ export LIBVA_DRIVER_NAME=iHD
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+# pnpm
+export PNPM_HOME="/home/ging/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

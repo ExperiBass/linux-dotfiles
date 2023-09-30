@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ##############################################
-##       Author: Gingka/Ginger Pepper       ##
-##     https://experibassmusic.eth.link     ##
+##       Author: Gïng Pepper       ##
+##     https://experibassmusic.eth.limo     ##
 ##############################################
 
 STEP=5       # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
