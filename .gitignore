@@ -3,7 +3,6 @@
 !.zshrc
 !.profile
 !README.MD
-!node_modules
 
 # track config files
 !/.config
@@ -52,6 +51,7 @@
 !/.bin/keyboard-backlight
 !/.bin/touchpadctl
 !/.bin/volume-ctl
+!/.bin/launcher.sh
 !/.bin/powermenu.sh
 !/.bin/restore.sh
 !/.bin/node-scripts/
